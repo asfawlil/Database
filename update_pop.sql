@@ -1,7 +1,3 @@
-UPDATE Population SET population =  WHERE country = '';
-UPDATE Population SET population =  WHERE country = '45813';
-UPDATE Population SET population =  WHERE country = '';
-UPDATE Population SET population = 2023 WHERE country = 'Country Code';
 UPDATE Population SET population = 107359 WHERE country = 'ABW';
 UPDATE Population SET population = 750503764 WHERE country = 'AFE';
 UPDATE Population SET population = 41454761 WHERE country = 'AFG';
