@@ -54,10 +54,8 @@ Each country has various economic sectors (e.g., agriculture, services, industry
 The mini-world reflects a globalized economy, where countries evolve economically, engage in trade, adopt or change currencies, and shift their industrial focus. This economic perspective enriches the existing geographic scope of the Mondial database and allows for complex querying and insightful data analysis.
 
 
-
-
-
-
+#
+#
 
 
 ## 🔐 Keys & Consistency Constraints
