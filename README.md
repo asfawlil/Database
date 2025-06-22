@@ -32,9 +32,9 @@ Each country is a sovereign entity with basic attributes like name, area, and po
 
 Each country has economic indicators recorded annually, including:
 
-Gross Domestic Product (GDP)
-Inflation rate
-Unemployment rate
+Gross Domestic Product (GDP),
+Inflation rate,
+Unemployment rate,
 These data points allow comparison of economic development across time and between countries.
 
 💱 Currency
