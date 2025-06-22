@@ -55,6 +55,11 @@ The mini-world reflects a globalized economy, where countries evolve economicall
 
 
 
+
+
+
+
+
 ## 🔐 Keys & Consistency Constraints
 
 To ensure data integrity and avoid redundancy, the database schema defines several key constraints and validation rules.
