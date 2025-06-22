@@ -54,3 +54,55 @@ Each country has various economic sectors (e.g., agriculture, services, industry
 The mini-world reflects a globalized economy, where countries evolve economically, engage in trade, adopt or change currencies, and shift their industrial focus. This economic perspective enriches the existing geographic scope of the Mondial database and allows for complex querying and insightful data analysis.
 
 
+
+## 🔐 Keys & Consistency Constraints
+
+To ensure data integrity and avoid redundancy, the database schema defines several key constraints and validation rules.
+
+### Primary Keys
+Each table has a primary key that uniquely identifies its rows:
+
+- `Country(id)` – ISO-style country code (e.g., 'DE', 'FR')
+- `Currency(code)` – Unique currency code (e.g., 'USD', 'EUR')
+- `Sector(id)` – Auto-incremented sector ID
+- `EconomyData(id)` – Auto-incremented ID for each economic record
+- `Trade(id)` – Auto-incremented ID for each trade entry
+- `CountryCurrency(country_id, currency_code, start_year)` – Composite key for currency usage periods
+- `CountrySector(country_id, sector_id, year)` – Composite key for sector share in a given year
+
+### Foreign Keys
+Relationships between entities are enforced via foreign key constraints:
+
+- `EconomyData.country_id → Country(id)`
+- `Trade.from_country_id → Country(id)`
+- `Trade.to_country_id → Country(id)`
+- `CountryCurrency.country_id → Country(id)`
+- `CountryCurrency.currency_code → Currency(code)`
+- `CountrySector.country_id → Country(id)`
+- `CountrySector.sector_id → Sector(id)`
+
+These constraints ensure that economic or trade data cannot reference non-existent countries, currencies, or sectors.
+
+### Unique Constraints
+To avoid duplicate records:
+
+- `EconomyData` ensures one economic record per country per year:  
+  `UNIQUE(country_id, year)`
+
+### Check Constraints
+To maintain valid data ranges:
+
+- `CountrySector.share_of_gdp` must be a percentage between 0 and 100:  
+  `CHECK (share_of_gdp BETWEEN 0 AND 100)`
+- `Trade` prevents a country from trading with itself:  
+  `CHECK (from_country_id <> to_country_id)`
+
+### Not Null Constraints
+Important fields like `Country.name` and `Currency.code` are declared `NOT NULL` to ensure they are always present.
+
+---
+
+These constraints collectively enforce **referential integrity**, **valid input ranges**, and **uniqueness** – ensuring the database remains consistent and accurate even during insertions or updates.
+
+
+
