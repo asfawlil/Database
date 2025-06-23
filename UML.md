@@ -53,6 +53,45 @@ classDiagram
         float share_of_gdp
     }
 
+    class AverageSalary {
+        int id
+        string country_id
+        int year
+        float amount
+        string currency_code
+    }
+
+    class MinimumWage {
+        int id
+        string country_id
+        int year
+        float amount
+        string currency_code
+    }
+
+    class PublicDebt {
+        int id
+        string country_id
+        int year
+        float amount
+        float percentage_of_gdp
+    }
+
+    class InfrastructureInvestment {
+        int id
+        string country_id
+        int year
+        string sector
+        float amount
+    }
+
+    class BanksPerCountry {
+        int id
+        string country_id
+        int year
+        int number_of_banks
+    }
+
     Country "1" --> "0..*" EconomyData : has
     Country "1" --> "0..*" CountryCurrency : uses
     Currency "1" --> "0..*" CountryCurrency : used_in
@@ -60,3 +99,8 @@ classDiagram
     Sector "1" --> "0..*" CountrySector : part_of
     Country "1" --> "0..*" Trade : exports
     Country "1" --> "0..*" Trade : imports
+    Country "1" --> "0..*" AverageSalary : pays
+    Country "1" --> "0..*" MinimumWage : guarantees
+    Country "1" --> "0..*" PublicDebt : owes
+    Country "1" --> "0..*" InfrastructureInvestment : invests_in
+    Country "1" --> "0..*" BanksPerCountry : owns
