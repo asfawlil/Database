@@ -1,106 +1,118 @@
 # UML CLASS DIAGRAM
 
 ```mermaid
-
 classDiagram
-    class Country {
-        string id
-        string name
-        int population
-        float area
-    }
 
-    class EconomyData {
-        int id
-        int year
-        float gdp
-        float inflation
-        float unemployment_rate
-        string country_id
-    }
+class Currency {
+  +int currency_id
+  +varchar name
+  +char abbreviation
+  +numeric exchange_rate
+  +char country_code
+}
 
-    class Trade {
-        int id
-        int year
-        float export_value
-        float import_value
-        string from_country_id
-        string to_country_id
-    }
+class GDP {
+  +int gdp_id
+  +int year
+  +numeric amount
+  +char country_code
+  +int currency_id
+}
 
-    class Currency {
-        string code
-        string name
-        string symbol
-    }
+class Inflation {
+  +int inflation_id
+  +int year
+  +numeric rate
+  +char country_code
+}
 
-    class CountryCurrency {
-        string country_id
-        string currency_code
-        int start_year
-        int end_year
-    }
+class Unemployment {
+  +int unemployment_id
+  +int year
+  +numeric rate
+  +char country_code
+}
 
-    class Sector {
-        int id
-        string name
-    }
+class MinimumWage {
+  +int min_wage_id
+  +int year
+  +numeric amount
+  +char country_code
+  +int currency_id
+}
 
-    class CountrySector {
-        string country_id
-        int sector_id
-        int year
-        float share_of_gdp
-    }
+class AverageSalary {
+  +int salary_id
+  +int year
+  +numeric amount
+  +char country_code
+  +int currency_id
+}
 
-    class AverageSalary {
-        int id
-        string country_id
-        int year
-        float amount
-        string currency_code
-    }
+class Exports {
+  +int export_id
+  +int year
+  +numeric value
+  +char country_code
+}
 
-    class MinimumWage {
-        int id
-        string country_id
-        int year
-        float amount
-        string currency_code
-    }
+class Imports {
+  +int import_id
+  +int year
+  +numeric value
+  +char country_code
+}
 
-    class PublicDebt {
-        int id
-        string country_id
-        int year
-        float amount
-        float percentage_of_gdp
-    }
+class IndustryShare {
+  +int industry_id
+  +int year
+  +numeric percentage
+  +char country_code
+}
 
-    class InfrastructureInvestment {
-        int id
-        string country_id
-        int year
-        string sector
-        float amount
-    }
+class GovernmentDebt {
+  +int debt_id
+  +int year
+  +numeric amount
+  +char country_code
+  +int currency_id
+}
 
-    class BanksPerCountry {
-        int id
-        string country_id
-        int year
-        int number_of_banks
-    }
+class InternetPenetration {
+  +int penetration_id
+  +int year
+  +numeric percentage
+  +char country_code
+}
 
-    Country "1" --> "0..*" EconomyData : has
-    Country "1" --> "0..*" CountryCurrency : uses
-    Currency "1" --> "0..*" CountryCurrency : used_in
-    Country "1" --> "0..*" CountrySector : has
-    Sector "1" --> "0..*" CountrySector : part_of
-    Country "1" --> "0..*" Trade : exports
-    Country "1" --> "0..*" Trade : imports
-    Country "1" --> "0..*" AverageSalary : pays
-    Country "1" --> "0..*" MinimumWage : guarantees
-    Country "1" --> "0..*" PublicDebt : owes
-    Country "1" --> "0..*" InfrastructureInvestment : invests_in
-    Country "1" --> "0..*" BanksPerCountry : owns
+class CO2Emissions {
+  +int co2_id
+  +int year
+  +numeric emissions
+  +char country_code
+  +varchar unit
+}
+
+class Country {
+  +char code
+  +varchar name
+}
+
+Country "1" --> "*" Currency : uses
+Currency "1" --> "*" GDP : referenced_by
+Currency "1" --> "*" MinimumWage : used_in
+Currency "1" --> "*" AverageSalary : used_in
+Currency "1" --> "*" GovernmentDebt : used_in
+
+Country "1" --> "*" GDP
+Country "1" --> "*" Inflation
+Country "1" --> "*" Unemployment
+Country "1" --> "*" MinimumWage
+Country "1" --> "*" AverageSalary
+Country "1" --> "*" Exports
+Country "1" --> "*" Imports
+Country "1" --> "*" IndustryShare
+Country "1" --> "*" GovernmentDebt
+Country "1" --> "*" InternetPenetration
+Country "1" --> "*" CO2Emissions
+```
