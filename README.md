@@ -21,6 +21,14 @@ We aim to model and implement economic data such as GDP, inflation, trade, curre
 # 🌐 Mini-World Description: Economic Factors in the Mondial Database
 This mini-world models the economic dimensions of countries within the existing geographic and political structure of the Mondial database. The goal is to create a globally integrated data model that reflects key economic indicators and their dynamic evolution over time. This enhancement provides richer analytical capabilities for studying the development of key macroeconomic indicators, trade relations, currency adoption, and industrial composition.
 
+## 🎯 Motivation
+
+While the original Mondial database provides valuable insights into the political and geographical aspects of countries, it lacks an economic perspective. In today’s interconnected world, economic factors are essential for understanding global dynamics and national development.
+
+This project extends the Mondial schema to include core macroeconomic data such as GDP, inflation, unemployment, currency history, international trade, and the composition of economic sectors. These additions allow for more comprehensive analyses and help answer questions that combine geography, politics, and economics – such as how countries evolve economically, how trade relationships form, or how sectoral shifts reflect broader development trends.
+
+By integrating these economic dimensions, we aim to create a more complete and flexible foundation for data exploration, academic use, and scenario-based querying.
+
 🌍 Countries
 
 Each country is a sovereign entity with basic attributes like name, area, and population. Countries are uniquely identified and serve as the central anchor for all economic data.
