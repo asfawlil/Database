@@ -18,11 +18,8 @@ We aim to model and implement economic data such as GDP, inflation, trade, curre
 - Arlin Nerguti
 
 
-
-
-
-# 🌐 Mini-World Description: Economy Factors in Mondial
-The mini-world describes a global database that models the economic characteristics of countries in addition to their existing geographic and political information. The extended database focuses on key macroeconomic indicators, trade relationships, currency usage, and industrial sectors, all of which vary by country and evolve over time.
+# 🌐 Mini-World Description: Economic Factors in the Mondial Database
+This mini-world models the economic dimensions of countries within the existing geographic and political structure of the Mondial database. The goal is to create a globally integrated data model that reflects key economic indicators and their dynamic evolution over time. This enhancement provides richer analytical capabilities for studying the development of key macroeconomic indicators, trade relations, currency adoption, and industrial composition.
 
 🌍 Countries
 
