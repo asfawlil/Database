@@ -1,8 +1,5 @@
--- Datei: 06_consistency_modeling.sql
--- Zweck: Normalisierung und Datenmodellierung (Aufgabe 5)
+-- Zweck: Normalisierung und Datenmodellierung 
 -- Autor: student38
-
--- Tabellen in 3NF anlegen
 
 -- 1. Tabelle: Minimum Wage
 CREATE TABLE student38.minimum_wage (
