@@ -1,6 +1,5 @@
 -- Komplexe Auswertungen zum Arbeitsmarkt
--- Autorin: student38 
--- Jahr: 2023 
+-- Autorin: student38 ; Liliana Asfaw 
 
 -- Query 1: Mindestlohn im Verhältnis zum Durchschnittslohn
 -- Ziel: Wie viel Prozent des Ø-Lohns macht der Mindestlohn aus?

@@ -1,5 +1,5 @@
 -- Zweck: Normalisierung und Datenmodellierung 
--- Autor: student38
+-- Autorin: student38 ; Liliana Asfaw 
 
 -- 1. Tabelle: Minimum Wage
 CREATE TABLE student38.minimum_wage (

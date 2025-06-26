@@ -1,11 +1,20 @@
--- Mondial-Erweiterung: population_extended & lake_extended
--- Autorin: student38 | Jahr: 2023 | Modul: BIS2161 / BIS3081
+-- ============================================
+-- Mondial-Erweiterung: Bevölkerung & Seen
+-- Autorin: student38 ; Liliana Asfaw 
+-- ============================================
 
--- Erweiterung 1: Bevölkerungstabelle mit ökonomischen Zusatzdaten
+ 
+-- ERWEITERUNG 1: Bevölkerung mit Zusatzdaten 
+
 DROP TABLE IF EXISTS student38.population_extended CASCADE;
 
 CREATE TABLE student38.population_extended AS
-SELECT *, 2023 AS year FROM public.population;
+SELECT 
+  c.code AS country,             -- z. B. 'D'
+  c.name AS country_name,        -- z. B. 'Germany'
+  c.population AS population,    -- aktuelle Bevölkerung
+  2023 AS year                   -- festes Jahr
+FROM public.country c;
 
 ALTER TABLE student38.population_extended
 ADD COLUMN population_density NUMERIC,
@@ -17,7 +26,7 @@ ADD COLUMN life_expectancy NUMERIC;
 ALTER TABLE student38.population_extended
 ADD PRIMARY KEY (country, year);
 
--- Beispielwerte für Deutschland & Frankreich
+-- Beispielwerte für DE & FR
 UPDATE student38.population_extended
 SET 
   population_density = 233.1,
@@ -36,83 +45,77 @@ SET
   life_expectancy = 82.7
 WHERE country = 'F' AND year = 2023;
 
--- Zufallsdaten für alle übrigen Länder
+-- Zufallsdaten für übrige Länder
 UPDATE student38.population_extended
 SET 
-  population_density = ROUND((RANDOM() * 200 + 30)::numeric, 1),
-  urban_percent = ROUND((RANDOM() * 50 + 50)::numeric, 1),
-  fertility_rate = ROUND((RANDOM() * 1.5 + 1.0)::numeric, 2),
-  migration_balance = ROUND((RANDOM() * 500000 - 250000)::numeric),
-  life_expectancy = ROUND((RANDOM() * 15 + 65)::numeric, 1)
+  population_density = ROUND((RANDOM() * 200 + 30)::NUMERIC, 1),
+  urban_percent = ROUND((RANDOM() * 50 + 50)::NUMERIC, 1),
+  fertility_rate = ROUND((RANDOM() * 1.5 + 1.0)::NUMERIC, 2),
+  migration_balance = ROUND((RANDOM() * 500000 - 250000)::NUMERIC),
+  life_expectancy = ROUND((RANDOM() * 15 + 65)::NUMERIC, 1)
 WHERE country NOT IN ('D', 'F');
 
--- Erweiterung 2: Seen mit Tourismus- und Umweltdaten
+
+-- ERWEITERUNG 2: Seen mit Umwelt- & Tourismusdaten
+
 DROP TABLE IF EXISTS student38.lake_extended CASCADE;
 
-CREATE TABLE student38.lake_extended AS
-SELECT * FROM public.lake;
+CREATE TABLE student38.lake_extended (
+    lake_id SERIAL PRIMARY KEY,
+    name TEXT,
+    country_code TEXT,
+    country_name TEXT,
+    area NUMERIC,
+    depth NUMERIC,
+    height NUMERIC,
+    year SMALLINT,
+    tourist_rating INT CHECK (tourist_rating BETWEEN 1 AND 10),
+    protected_area BOOLEAN,
+    avg_depth NUMERIC,
+    water_quality_grade TEXT,
+    endangered_species_count INT,
+    annual_visitors_millions NUMERIC,
+    type TEXT
+);
 
-ALTER TABLE student38.lake_extended
-ADD COLUMN tourist_rating INT CHECK (tourist_rating BETWEEN 1 AND 10),
-ADD COLUMN protected_area BOOLEAN,
-ADD COLUMN avg_depth NUMERIC,
-ADD COLUMN water_quality_grade TEXT,
-ADD COLUMN endangered_species_count INT,
-ADD COLUMN annual_visitors_millions NUMERIC;
+-- Seen mit Land aus Mondial verknüpfen
+INSERT INTO student38.lake_extended (
+    name, country_code, country_name, area, depth, height, year
+)
+SELECT 
+    l.name,
+    c.code AS country_code,
+    c.name AS country_name,
+    l.area,
+    l.depth,
+    l.height,
+    2023 AS year
+FROM public.lake l
+JOIN public.located loc ON l.name = loc.lake
+JOIN public.country c ON loc.country = c.code;
 
-ALTER TABLE student38.lake_extended
-ADD PRIMARY KEY (name, area);
-
--- Beispielhafte manuelle Werte
+-- Tourismus-/Umweltdaten generieren
 UPDATE student38.lake_extended
 SET 
-  tourist_rating = 9,
-  protected_area = TRUE,
-  avg_depth = 90,
-  water_quality_grade = 'A',
-  endangered_species_count = 12,
-  annual_visitors_millions = 2.5,
-  depth = 254,
-  height = 100
-WHERE name = 'Bodensee';
+    tourist_rating = FLOOR(RANDOM() * 6 + 5)::INT,
+    protected_area = CASE WHEN RANDOM() < 0.4 THEN TRUE ELSE FALSE END,
+    avg_depth = ROUND((RANDOM() * 300 + 20)::NUMERIC, 1),
+    water_quality_grade = CASE 
+        WHEN RANDOM() < 0.6 THEN 'A' 
+        WHEN RANDOM() < 0.85 THEN 'B' 
+        ELSE 'C' 
+    END,
+    endangered_species_count = ROUND((RANDOM() * 15)::NUMERIC)::INT,
+    annual_visitors_millions = ROUND((RANDOM() * 5 + 0.5)::NUMERIC, 2),
+    type = CASE 
+        WHEN name ILIKE '%reserv%' OR name ILIKE '%dam%' THEN 'reservoir'
+        WHEN name ILIKE '%lake%' OR name ILIKE '%see%' THEN 'natural'
+        ELSE CASE WHEN RANDOM() < 0.85 THEN 'natural' ELSE 'reservoir' END
+    END;
 
-UPDATE student38.lake_extended
-SET 
-  tourist_rating = 7,
-  protected_area = FALSE,
-  avg_depth = 48,
-  water_quality_grade = 'B',
-  endangered_species_count = 5,
-  annual_visitors_millions = 1.3,
-  depth = 310,
-  height = 120
-WHERE name = 'Lake Geneva';
-
--- Automatisch generierte Daten für alle restlichen Seen
-UPDATE student38.lake_extended
-SET 
-  tourist_rating = FLOOR(RANDOM() * 6 + 5)::int,
-  protected_area = CASE WHEN RANDOM() < 0.4 THEN TRUE ELSE FALSE END,
-  avg_depth = ROUND((RANDOM() * 300 + 20)::numeric, 1),
-  water_quality_grade = CASE 
-    WHEN RANDOM() < 0.6 THEN 'A' 
-    WHEN RANDOM() < 0.85 THEN 'B' 
-    ELSE 'C' 
-  END,
-  endangered_species_count = ROUND((RANDOM() * 15)::numeric)::int,
-  annual_visitors_millions = ROUND((RANDOM() * 5 + 0.5)::numeric, 2),
-  depth = COALESCE(depth, ROUND((RANDOM() * 300 + 10)::numeric, 1)),
-  height = COALESCE(height, ROUND((RANDOM() * 400 + 50)::numeric, 1))
-WHERE 
-  tourist_rating IS NULL OR
-  protected_area IS NULL OR
-  avg_depth IS NULL OR
-  water_quality_grade IS NULL OR
-  endangered_species_count IS NULL OR
-  annual_visitors_millions IS NULL OR
-  depth IS NULL OR
-  height IS NULL;
-
+-- ============================================
 -- Kontrolle
+-- ============================================
+
 SELECT * FROM student38.population_extended ORDER BY country;
-SELECT * FROM student38.lake_extended ORDER BY name;
+SELECT * FROM student38.lake_extended ORDER BY country_name, name;

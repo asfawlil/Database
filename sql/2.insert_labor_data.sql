@@ -1,5 +1,5 @@
 -- Arbeitsmarktdaten: Beispielhafte Einträge für das Jahr 2023
--- Autorin: student38 
+-- Autorin: student38 ; Liliana Asfaw 
 
 -- Arbeitslosenquote in Prozent
 INSERT INTO student38.unemployment (country_code, country_name, year, unemployment_rate) VALUES

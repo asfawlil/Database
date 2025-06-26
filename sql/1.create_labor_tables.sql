@@ -1,7 +1,7 @@
 -- Active: 1750679793034@@141.47.5.117@5432@mondial
 -- Arbeitsmarktdaten – Tabellenanlage für die Mondial-Erweiterung
 -- Thema: Ökonomische Indikatoren (Arbeitslosenquote, Durchschnittslohn, Mindestlohn)
--- Autorin: student38 | Modul: BIS2161 / BIS3081
+-- Autorin: student38 ; Liliana Asfaw 
 
 -- Tabelle: unemployment
 -- Speichert jährliche Arbeitslosenquoten pro Land (in Prozent)
