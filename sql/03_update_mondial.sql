@@ -9,7 +9,7 @@
 */
 
 -- =====================================================================
--- 🔹 ERWEITERUNG 1: population_extended → Zusatzinfos zur Bevölkerung
+--  ERWEITERUNG 1: population_extended → Zusatzinfos zur Bevölkerung
 -- =====================================================================
 
 -- 1.1 Kopie von public.population in dein Schema
@@ -53,7 +53,7 @@ SET
 WHERE country = 'F' AND year = 2020;
 
 -- =====================================================================
--- 🔹 ERWEITERUNG 2: lake_extended → Zusatzinfos zu Seen
+--  ERWEITERUNG 2: lake_extended → Zusatzinfos zu Seen
 -- =====================================================================
 
 -- 2.1 Kopie von public.lake in dein Schema
@@ -95,7 +95,7 @@ SET
 WHERE name = 'Lake Geneva';
 
 -- =====================================================================
--- 🔎 Kontrolle (optional)
+--  Kontrolle (optional)
 -- =====================================================================
 SELECT * FROM student38.population_extended WHERE country IN ('D', 'F') ORDER BY year DESC;
 SELECT * FROM student38.lake_extended WHERE name IN ('Bodensee', 'Lake Geneva');
