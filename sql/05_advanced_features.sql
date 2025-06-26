@@ -1,15 +1,8 @@
-/*
-  -----------------------------------------------------------------------
-  -- Datei: 05_advanced_features.sql
-  -- Zweck: Erweiterte SQL-Features für Arbeitsmarktdaten
-  -- Autor: student38
-  -----------------------------------------------------------------------
-*/
+-- Erweiterte SQL-Features: Views, Trigger & Stored Procedures
+-- Autorin: student38 
+-- Jahr: 2023 
 
--- ===============================
---  VIEW: Übersicht zu Arbeitsmarktdaten 2023
--- ===============================
-
+-- View: Übersicht aller Arbeitsmarktdaten 2023
 CREATE OR REPLACE VIEW student38.labor_market_summary_2023 AS
 SELECT
   u.country_name,
@@ -23,11 +16,7 @@ JOIN student38.average_salary a ON u.country_code = a.country_code AND u.year = 
 JOIN student38.minimum_wage m ON u.country_code = m.country_code AND u.year = m.year
 WHERE u.year = 2023;
 
--- ===============================
---  TRIGGER-FUNKTIONEN
--- ===============================
-
--- Mindestlohn >= 1000 EUR (falls vorhanden)
+-- Trigger-Funktion: Mindestlohn darf nicht < 1000 EUR sein (falls gesetzt)
 CREATE OR REPLACE FUNCTION student38.check_minimum_wage()
 RETURNS TRIGGER AS $$
 BEGIN
@@ -38,7 +27,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- Durchschnittslohn > 0
+-- Trigger-Funktion: Durchschnittslohn muss positiv sein
 CREATE OR REPLACE FUNCTION student38.check_average_salary()
 RETURNS TRIGGER AS $$
 BEGIN
@@ -49,7 +38,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- Arbeitslosenquote zwischen 0 und 100
+-- Trigger-Funktion: Arbeitslosenquote muss zwischen 0 und 100 liegen
 CREATE OR REPLACE FUNCTION student38.check_unemployment_rate()
 RETURNS TRIGGER AS $$
 BEGIN
@@ -60,10 +49,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- ===============================
---  TRIGGER REGISTRIEREN
--- ===============================
-
+-- Trigger-Registrierung
 DROP TRIGGER IF EXISTS trg_check_min_wage ON student38.minimum_wage;
 CREATE TRIGGER trg_check_min_wage
 BEFORE INSERT OR UPDATE ON student38.minimum_wage
@@ -82,11 +68,7 @@ BEFORE INSERT OR UPDATE ON student38.unemployment
 FOR EACH ROW
 EXECUTE FUNCTION student38.check_unemployment_rate();
 
--- ===============================
---  STORED PROCEDURES
--- ===============================
-
--- Durchschnittslohn einfügen oder updaten
+-- Stored Procedure: Durchschnittslohn einfügen oder aktualisieren
 CREATE OR REPLACE PROCEDURE student38.upsert_average_salary(
   p_country_code CHAR(2),
   p_country_name VARCHAR,
@@ -110,7 +92,7 @@ BEGIN
 END;
 $$;
 
--- Mindestlohn einfügen oder updaten
+-- Stored Procedure: Mindestlohn einfügen oder aktualisieren
 CREATE OR REPLACE PROCEDURE student38.upsert_minimum_wage(
   p_country_code CHAR(2),
   p_country_name VARCHAR,
@@ -134,7 +116,7 @@ BEGIN
 END;
 $$;
 
--- Arbeitslosenquote einfügen oder updaten
+-- Stored Procedure: Arbeitslosenquote einfügen oder aktualisieren
 CREATE OR REPLACE PROCEDURE student38.upsert_unemployment(
   p_country_code CHAR(2),
   p_country_name VARCHAR,

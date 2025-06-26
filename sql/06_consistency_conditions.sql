@@ -1,14 +1,8 @@
-/*
-  -----------------------------------------------------------------------
-  -- Datei: 06_consistency_modeling.sql
-  -- Zweck: Normalisierung und Datenmodellierung (Aufgabe 5)
-  -- Autor: student38
-  -----------------------------------------------------------------------
-*/
+-- Datei: 06_consistency_modeling.sql
+-- Zweck: Normalisierung und Datenmodellierung (Aufgabe 5)
+-- Autor: student38
 
--- ===============================
--- TABELLEN  ANLEGEN (3NF-gerecht)
--- ===============================
+-- Tabellen in 3NF anlegen
 
 -- 1. Tabelle: Minimum Wage
 CREATE TABLE student38.minimum_wage (
@@ -21,7 +15,7 @@ CREATE TABLE student38.minimum_wage (
     UNIQUE (country_code, year)
 );
 
---  2. Tabelle: Average Salary
+-- 2. Tabelle: Average Salary
 CREATE TABLE student38.average_salary (
     average_salary_id SERIAL PRIMARY KEY,
     country_code CHAR(2) NOT NULL,
@@ -32,7 +26,7 @@ CREATE TABLE student38.average_salary (
     UNIQUE (country_code, year)
 );
 
---  3. Tabelle: Unemployment
+-- 3. Tabelle: Unemployment
 CREATE TABLE student38.unemployment (
     unemployment_id SERIAL PRIMARY KEY,
     country_code CHAR(2) NOT NULL,
@@ -42,10 +36,7 @@ CREATE TABLE student38.unemployment (
     UNIQUE (country_code, year)
 );
 
--- ===============================
--- ERWEITERTE STRUKTUR: Abstrakte Oberklasse
--- ===============================
-
+-- Erweiterte Struktur: Abstrakte Oberklasse
 CREATE TABLE student38.labor_data (
     data_id SERIAL PRIMARY KEY,
     data_type VARCHAR(30) NOT NULL CHECK (data_type IN ('MinimumWage', 'AverageSalary', 'Unemployment')),
@@ -57,9 +48,7 @@ CREATE TABLE student38.labor_data (
     FOREIGN KEY (unemployment_id) REFERENCES student38.unemployment(unemployment_id) ON DELETE CASCADE
 );
 
--- ===============================
 -- Alle Tabellen erfüllen:
--- ===============================
 -- 1NF: Alle Felder atomar 
 -- 2NF: Keine partiellen Abhängigkeiten 
--- 3NF: Keine transitiven Abhängigkeiten 
+-- 3NF: Keine transitiven Abhängigkeiten

@@ -1,12 +1,7 @@
--- Active: 1750679793034@@141.47.5.117@5432@mondial
-/*
-  -----------------------------------------------------------------------
-  -- Datei: 02_insert_sample_data.sql
-  -- Zweck: Arbeitsmarktdaten einfügen
-  -----------------------------------------------------------------------
-*/
+-- Arbeitsmarktdaten: Beispielhafte Einträge für das Jahr 2023
+-- Autorin: student38 
 
--- Arbeitslosenquote
+-- Arbeitslosenquote in Prozent
 INSERT INTO student38.unemployment (country_code, country_name, year, unemployment_rate) VALUES
 ('D',  'Germany',         2023, 5.7),
 ('GB', 'United Kingdom',  2023, 4.2),
@@ -17,7 +12,7 @@ INSERT INTO student38.unemployment (country_code, country_name, year, unemployme
 ('CH', 'Switzerland',     2023, 2.1),
 ('E',  'Spain',           2023, 12.3);
 
--- Durchschnittslohn
+-- Durchschnittslohn (brutto, Jahresgehalt in Landeswährung)
 INSERT INTO student38.average_salary (country_code, country_name, year, amount, currency_name) VALUES
 ('D',  'Germany',         2023, 43200.00, 'EUR'),
 ('GB', 'United Kingdom',  2023, 38700.00, 'GBP'),
@@ -28,8 +23,8 @@ INSERT INTO student38.average_salary (country_code, country_name, year, amount, 
 ('CH', 'Switzerland',     2023, 62400.00, 'CHF'),
 ('E',  'Spain',           2023, 29500.00, 'EUR');
 
-
--- Mindestlohn
+-- Gesetzlicher Mindestlohn (monatlich, falls vorhanden)
+-- Hinweis: NULL bedeutet, dass kein gesetzlicher Mindestlohn existiert
 INSERT INTO student38.minimum_wage (country_code, country_name, year, amount, currency_name) VALUES
 ('D',  'Germany',         2023, 2080.00, 'EUR'),
 ('GB', 'United Kingdom',  2023, 1760.00, 'GBP'),

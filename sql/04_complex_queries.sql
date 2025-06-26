@@ -1,18 +1,10 @@
-/*
-  -----------------------------------------------------------------------
-  -- Datei: 04_complex_queries.sql
-  -- Zweck: 3 interessante & komplexe Abfragen mit garantierter Ausgabe
-  -- Autorin: student38
-  -----------------------------------------------------------------------
-*/
+-- Komplexe Auswertungen zum Arbeitsmarkt
+-- Autorin: student38 
+-- Jahr: 2023 
 
--- =========================================================
--- QUERY 1: Mindestlohn im Verhältnis zum Durchschnittslohn
--- → Berechnet den Anteil des Mindestlohns am Ø-Lohn pro Land & Jahr
--- → Zeigt zusätzlich, ob ein Land unter oder über dem globalen Ø liegt
--- → Nutzt Berechnungen, Joins und ein CTE zur Vergleichseinordnung
--- =========================================================
-
+-- Query 1: Mindestlohn im Verhältnis zum Durchschnittslohn
+-- Ziel: Wie viel Prozent des Ø-Lohns macht der Mindestlohn aus?
+-- Ergänzt durch Einordnung unter/über dem globalen Durchschnitt
 WITH global_avg AS (
   SELECT ROUND(AVG(amount), 2) AS avg_global_salary
   FROM student38.average_salary
@@ -36,14 +28,9 @@ CROSS JOIN global_avg g
 WHERE m.amount IS NOT NULL AND a.amount IS NOT NULL
 ORDER BY min_wage_percent DESC;
 
-
--- =========================================================
--- QUERY 2: Länder mit potenziell wirtschaftlicher Belastung
--- → Kombination von hoher Arbeitslosigkeit & niedrigem Ø-Lohn
--- → Klassifizierung in "Kritisch", "Angespannt", "Moderat"
--- → Verknüpft Daten logisch durch Bedingungen & Bewertung
--- =========================================================
-
+-- Query 2: Wirtschaftlich angespannte Länder
+-- Ziel: Kombination aus hoher Arbeitslosigkeit & niedrigem Lohn
+-- Ergebnis: Einstufung in "Kritisch", "Angespannt" oder "Moderat"
 SELECT 
   u.country_name,
   u.year,
@@ -61,14 +48,9 @@ WHERE u.unemployment_rate IS NOT NULL
   AND a.amount IS NOT NULL
 ORDER BY risk_level DESC, u.unemployment_rate DESC;
 
-
--- =========================================================
--- QUERY 3: Länder mit überdurchschnittlichem Mindestlohn
--- → Jährlicher Vergleich: Wo liegt der Mindestlohn über dem Jahres-Ø?
--- → Nutzt ein CTE für Gruppierung & Differenzberechnung
--- → Sortierung nach Abweichung vom Jahresmittel, begrenzt auf Top-Ergebnisse
--- =========================================================
-
+-- Query 3: Länder mit überdurchschnittlichem Mindestlohn
+-- Ziel: Identifikation der Länder, deren Mindestlohn über dem Jahres-Ø liegt
+-- Technik: CTE zur jährlichen Mittelwertberechnung, Differenzermittlung
 WITH avg_per_year AS (
   SELECT 
     year, 
