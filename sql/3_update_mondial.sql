@@ -1,118 +1,171 @@
 /* -----------------------------------------------------------------------------
-Wirtschaftliche Erweiterung für student32-Projekt
-Erweiterte Tabellen für Länder, Städte, BIP & Inflation
-@author: Njomza Bytyqi
+   FILE:    3_update_mondial_relations.sql
+   PURPOSE: Extension & update of two Mondial relations:
+            1) student32.province_economy_extended
+            2) student32.city_economic_data_extended
+   SCHEMA:  student32 (Economy indicators)
+   AUTHOR:  Njomza Bytyqi (student32 / 330021)
+   NOTES:   - All DDL and DML steps are idempotent (use IF EXISTS / IF NOT EXISTS)
+            - Clear separation of DDL and DML sections
+            - Consistent uppercase for SQL keywords
+            - Semicolons at end of each statement
+            - Wrap in a transaction for atomicity
 ----------------------------------------------------------------------------- */
 
--- ========== ERWEITERUNG 1: COUNTRY → Wirtschaftliche Zusatzdaten ==========
+BEGIN;  -- Begin transaction
 
--- 1.1 Erweiterte Länder-Tabelle mit Wirtschaftsdaten
-CREATE TABLE student32.country_economy AS
-SELECT *
-FROM public.country;
+-- ============================================================================
+-- SECTION 1: PROVINCE EXTENSION
+-- ============================================================================
 
--- Primary Key setzen
-ALTER TABLE student32.country_economy ADD PRIMARY KEY (code);
+-- 1.0 Drop old extended table if it exists
+DROP TABLE IF EXISTS student32.province_economy_extended CASCADE;
 
--- Zusätzliche wirtschaftliche Attribute
-ALTER TABLE student32.country_economy
-ADD COLUMN gdp_per_capita NUMERIC,
-ADD COLUMN inflation_target NUMERIC,
-ADD COLUMN central_bank_name TEXT,
-ADD COLUMN eu_member BOOLEAN DEFAULT FALSE,
-ADD COLUMN economic_zone TEXT,
-ADD COLUMN sovereign_debt_percent NUMERIC, -- Staatsschulden in % des BIP
-ADD COLUMN economic_classification TEXT;   -- z.B. "High Income", "Emerging Market"
+-- 1.1 Copy base table and add reference year
+CREATE TABLE IF NOT EXISTS student32.province_economy_extended AS
+SELECT
+  p.*,
+  2023 AS reference_year
+FROM
+  public.province AS p;
 
--- 1.2 Verknüpfungstabelle: Land ↔ Wirtschaftsbranchen
-CREATE TABLE student32.country_economic_sectors (
-    country_code CHAR(3) NOT NULL REFERENCES public.country(code) ON DELETE CASCADE,
-    sector_name TEXT NOT NULL,
-    gdp_share_percent NUMERIC CHECK (gdp_share_percent >= 0 AND gdp_share_percent <= 100),
-    employment_percent NUMERIC,
-    export_value NUMERIC,
-    PRIMARY KEY (country_code, sector_name)
-);
+-- 1.2 Add new economic indicator columns
+ALTER TABLE student32.province_economy_extended
+  ADD COLUMN IF NOT EXISTS province_gdp_per_capita    NUMERIC,  -- new: GDP per capita
+  ADD COLUMN IF NOT EXISTS province_infaltion_rate    NUMERIC,  -- new: Inflation rate
+  ADD COLUMN IF NOT EXISTS province_unemployment_rate NUMERIC,  -- new: Unemployment rate
+  ADD COLUMN IF NOT EXISTS province_gdp               NUMERIC,  -- new: Estimated total GDP
+  ADD COLUMN IF NOT EXISTS population_density         NUMERIC;  -- new: Population density
 
--- ========== ERWEITERUNG 2: CITY → Wirtschaftszentren ==========
+-- 1.3 Add primary key constraint
+ALTER TABLE student32.province_economy_extended
+  ADD CONSTRAINT pk_province_economy PRIMARY KEY (name, country, reference_year);
 
--- 2.1 Erweiterte Städte-Tabelle (robust mit ROW_NUMBER)
-CREATE TABLE student32.city_economic_data AS
-SELECT DISTINCT ON (name, country) *
-FROM public.city
-ORDER BY name, country;
-
--- 1. Bestehenden Primary Key entfernen 
-ALTER TABLE student32.city_economic_data
-DROP CONSTRAINT IF EXISTS city_economic_data_pkey;
-
--- 2. Spalte 'city_id' sicher entfernen, falls schon vorhanden
-ALTER TABLE student32.city_economic_data
-DROP COLUMN IF EXISTS city_id;
-
--- 3. Neue ID-Spalte hinzufügen 
-ALTER TABLE student32.city_economic_data
-ADD COLUMN city_id SERIAL PRIMARY KEY;
-
--- Wirtschaftsdaten für Städte
-ALTER TABLE student32.city_economic_data
-ADD COLUMN is_financial_hub BOOLEAN DEFAULT FALSE,
-ADD COLUMN stock_exchange_present BOOLEAN DEFAULT FALSE,
-ADD COLUMN gdp_city NUMERIC,
-ADD COLUMN unemployment_rate NUMERIC,
-ADD COLUMN major_industries TEXT,
-ADD COLUMN annual_conferences INT,
-ADD COLUMN international_organizations INT;
-
--- 2.2 Verknüpfungstabelle: Stadt ↔ BIP-Quellen
-CREATE TABLE student32.city_gdp_sources (
-    city_id INTEGER NOT NULL,
-    country_code CHAR(3) NOT NULL,
-    source_name TEXT NOT NULL,
-    source_type TEXT CHECK (source_type IN ('Government', 'International', 'Private')),
-    contribution_percent NUMERIC,
-    year INT,
-    FOREIGN KEY (city_id) REFERENCES student32.city_economic_data (city_id) ON DELETE CASCADE,
-    PRIMARY KEY (city_id, country_code, source_name, year)
-);
-
--- ========== Beispielhafte DATEN ==========
-
--- 3.1 Länder-Erweiterung
-UPDATE student32.country_economy
+-- 1.4 Populate random placeholder values for 2023 provinces
+UPDATE student32.province_economy_extended
 SET
-    gdp_per_capita = 48000,
-    inflation_target = 2.0,
-    central_bank_name = 'Deutsche Bundesbank',
-    eu_member = TRUE,
-    economic_zone = 'Eurozone',
-    sovereign_debt_percent = 66.5,
-    economic_classification = 'High Income'
-WHERE code = 'DEU';
+  province_gdp_per_capita    = ROUND((random() * 40000 + 5000)::numeric, 2),  -- between 5,000 and 45,000
+  province_infaltion_rate    = ROUND((random() * 5)::numeric, 2),             -- between 0% and 5%
+  province_unemployment_rate = ROUND((random() * 15)::numeric, 1),            -- between 0% and 15%
+  province_gdp               = ROUND(
+                                  COALESCE(province_gdp_per_capita, 0)
+                                  * COALESCE(population, 0)
+                                , 2),                                         -- GDP per capita × population
+  population_density         = ROUND(population / NULLIF(area, 0), 2)        -- population ÷ area
+WHERE
+  reference_year = 2023;
 
--- 3.2 Branchenanteile Deutschland
-INSERT INTO student32.country_economic_sectors (
-    country_code, sector_name, gdp_share_percent, employment_percent, export_value
-) VALUES
-    ('AL', 'Industry', 30.5, 25.1, 800000000000),
-    ('GR', 'Services', 68.0, 72.3, 100000000000),
-    ('CY', 'Agriculture', 1.5, 2.6, 20000000000);
+-- ============================================================================
+-- SECTION 2: CITY EXTENSION
+-- ============================================================================
 
--- 3.3 Städte-Erweiterung
-UPDATE student32.city_economic_data
+-- 2.0 Drop old extended table if it exists
+DROP TABLE IF EXISTS student32.city_economic_data_extended CASCADE;
+
+-- 2.1 Copy base table and add reference year
+CREATE TABLE IF NOT EXISTS student32.city_economic_data_extended AS
+SELECT
+  ced.*,
+  2023 AS reference_year
+FROM
+  student32.city_economic_data AS ced;
+
+-- 2.2 Add new economic indicator columns
+ALTER TABLE student32.city_economic_data_extended
+  ADD COLUMN IF NOT EXISTS tourism_index            NUMERIC,  -- new: Tourism index (0–100)
+  ADD COLUMN IF NOT EXISTS avg_income_per_capita    NUMERIC,  -- new: Average income per capita
+  ADD COLUMN IF NOT EXISTS public_transport_quality NUMERIC;  -- new: Public transport quality (1–10)
+
+-- 2.3 Add new geographic detail columns
+ALTER TABLE student32.city_economic_data_extended
+  ADD COLUMN IF NOT EXISTS latitude   NUMERIC,    -- new: Latitude
+  ADD COLUMN IF NOT EXISTS longitude  NUMERIC,    -- new: Longitude
+  ADD COLUMN IF NOT EXISTS elevation  NUMERIC;    -- new: Elevation above sea level (m)
+
+-- 2.4 Populate geographic details via join on public.city
+UPDATE student32.city_economic_data_extended AS cedx
 SET
-    is_financial_hub = TRUE,
-    stock_exchange_present = TRUE,
-    gdp_city = 740000000000,
-    unemployment_rate = 5.2,
-    major_industries = 'Finance, Consulting, IT',
-    annual_conferences = 120,
-    international_organizations = 15
-WHERE name = 'Frankfurt am Main' AND country = 'DEU';
+  latitude  = pc.latitude,
+  longitude = pc.longitude,
+  elevation = pc.elevation
+FROM
+  public.city AS pc
+WHERE
+  cedx.name        = pc.name
+  AND cedx.country = pc.country
+  AND cedx.reference_year = 2023;
 
--- 3.4 Stadt-BIP-Quellen
-INSERT INTO student32.city_gdp_sources (
-    city_id, country_code, source_name, source_type, contribution_percent, year
-) VALUES
-    (1, 'DEU', 'Statistisches Bundesamt', 'Government', 60.0, 2023),
-    (1, 'DEU', 'European Central Bank', 'International', 40.0, 2023);
+-- 2.5 Add primary key constraint
+ALTER TABLE student32.city_economic_data_extended
+  ADD CONSTRAINT pk_city_economic PRIMARY KEY (city_id, reference_year);
+
+-- 2.6–2.12 Populate random placeholder values for NULL columns
+UPDATE student32.city_economic_data_extended
+SET
+  tourism_index            = COALESCE(tourism_index,
+                                     ROUND((random() * 50 + 30)::numeric, 1)),  -- between 30 and 80
+  public_transport_quality = COALESCE(public_transport_quality,
+                                     ROUND((random() * 4 + 6)::numeric, 1)),   -- between 6 and 10
+  avg_income_per_capita    = COALESCE(avg_income_per_capita,
+                                     ROUND((random() * 50000 + 25000)::numeric, 0)), -- between 25k and 75k
+  major_industries         = CASE FLOOR(random() * 5)::int
+                                 WHEN 0 THEN 'Services, Retail, Manufacturing'
+                                 WHEN 1 THEN 'Finance, Insurance, Real Estate'
+                                 WHEN 2 THEN 'Tourism, Arts, Culture'
+                                 WHEN 3 THEN 'Technology, Startups, Research'
+                                 WHEN 4 THEN 'Logistics, Transport, Wholesale'
+                               END,
+  annual_conferences         = COALESCE(annual_conferences,
+                                       (FLOOR(random() * 50 + 1))::int),  -- between 1 and 50
+  international_organizations = COALESCE(international_organizations,
+                                       (FLOOR(random() * 20))::int),      -- between 0 and 19
+  unemployment_rate          = COALESCE(unemployment_rate,
+                                       ROUND((random() * 11 + 3)::numeric, 1)), -- between 3% and 14%
+  gdp_city                   = COALESCE(gdp_city,
+                                       ROUND((random() * 9900000 + 100000)::numeric, 0)) -- between 100k and 10M
+WHERE
+  reference_year = 2023;
+
+-- ============================================================================
+-- SECTION 3: VALIDATION QUERIES
+-- ============================================================================
+
+-- 3.1 Validate province_economy_extended
+SELECT
+  country,
+  name,
+  reference_year,
+  province_gdp_per_capita,
+  province_infaltion_rate,
+  province_unemployment_rate,
+  province_gdp,
+  population_density
+FROM
+  student32.province_economy_extended
+ORDER BY
+  country, name;
+
+-- 3.2 Validate city_economic_data_extended
+SELECT
+  city_id,
+  name,
+  country,
+  reference_year,
+  population,
+  latitude,
+  longitude,
+  elevation,
+  avg_income_per_capita,
+  unemployment_rate,
+  gdp_city,
+  tourism_index,
+  public_transport_quality,
+  major_industries,
+  annual_conferences,
+  international_organizations
+FROM
+  student32.city_economic_data_extended
+ORDER BY
+  name;
+
+COMMIT;  -- End transaction
