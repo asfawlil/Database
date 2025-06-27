@@ -1,65 +1,39 @@
 # Database
 
-🌍 Economy Factors Extension – Mondial Database Project
+🌍 **Economy Factors Extension** – Mondial Database Project
 
-This project extends the [Mondial Database](https://www.dbis.cs.tu-dortmund.de/cms/de/home/Lehre/Mondial/) with additional entities and relationships focused on **economic factors**, as part of the BIS2161 / BIS3081 module.
+This extension enhances the core [Mondial Database](https://www.dbis.cs.tu-dortmund.de/cms/de/home/Lehre/Mondial/) by incorporating key economic indicators and relationships. Developed for the BIS2161 / BIS3081 module, it bridges geographic and political data with economic insights.
 
-## 🧾 Project Overview
+## 📋 Project Overview
 
-We aim to model and implement economic data such as GDP, inflation, trade, currency usage, and industrial sectors, in order to provide more relevant and timely insights alongside geographical and political information.
-
+We introduce annual macroeconomic metrics—GDP, inflation, unemployment—alongside trade flows, currency transitions, and sector composition. Integrating these elements into the existing schema enables richer queries and analysis that combine spatial, political, and economic dimensions.
 
 ## 👥 Team Members
 
-- Liliana Asfaw
-- Njomza Bytyqi
-- Grenza Beqiri
-- Arlin Nerguti
-
+* Liliana Asfaw
+* Njomza Bytyqi
+* Grenza Beqiri
+* Arlin Nerguti
 
 # 🌐 Mini-World Description: Economic Factors in the Mondial Database
-This mini-world models the economic dimensions of countries within the existing geographic and political structure of the Mondial database. The goal is to create a globally integrated data model that reflects key economic indicators and their dynamic evolution over time. This enhancement provides richer analytical capabilities for studying the development of key macroeconomic indicators, trade relations, currency adoption, and industrial composition.
+
+This mini-world adds an economic layer to Mondial’s geographic and political schema, focusing on:
+
+* **Countries**: ISO-coded sovereign entities with name, area and population as a basis for all economic data.
+* **Economic Indicators**: Annual values of GDP (nominal and PPP), inflation rate and unemployment rate for each country to track growth and stability over time.
+* **Currency History**: Records of when countries adopt or retire currencies, including code, name, symbol and valid period (e.g. introduction of the euro).
+* **Trade Relations**: Yearly import and export figures between country pairs, enabling analysis of trade balances and dependencies.
+* **Sector Composition**: Percentage share of agriculture, industry and services in GDP each year to illustrate structural changes.
+
+By weaving these elements together, the model supports queries that combine spatial, political and economic dimensions for a deeper understanding of global development.
 
 ## 🎯 Motivation
 
-While the original Mondial database provides valuable insights into the political and geographical aspects of countries, it lacks an economic perspective. In today’s interconnected world, economic factors are essential for understanding global dynamics and national development.
+While Mondial excels at geographic and political information, adding economic factors is crucial for comprehensive global analysis. With this extension, you can:
 
-This project extends the Mondial schema to include core macroeconomic data such as GDP, inflation, unemployment, currency history, international trade, and the composition of economic sectors. These additions allow for more comprehensive analyses and help answer questions that combine geography, politics, and economics – such as how countries evolve economically, how trade relationships form, or how sectoral shifts reflect broader development trends.
-
-By integrating these economic dimensions, we aim to create a more complete and flexible foundation for data exploration, academic use, and scenario-based querying.
-
-🌍 Countries
-
-Each country is a sovereign entity with basic attributes like name, area, and population. Countries are uniquely identified and serve as the central anchor for all economic data.
-
-📈 Economy Data
-
-Each country has economic indicators recorded annually, including:
-
-Gross Domestic Product (GDP),
-Inflation rate,
-Unemployment rate,
-These data points allow comparison of economic development across time and between countries.
-
-💱 Currency
-
-Each country uses one or more currencies over time. A currency has a unique code, name, and symbol. The historical currency usage is recorded with start and end years, supporting scenarios such as currency changes (e.g. Euro introduction).
-
-🔁 Trade
-
-Countries engage in international trade. Trade data is modeled as directional: for each year, the database records the value of imports and exports from one country to another. This allows analysis of bilateral trade flows and trade balances.
-
-🏭 Sectors
-
-Each country has various economic sectors (e.g., agriculture, services, industry), and the share of GDP for each sector is stored yearly. This helps illustrate a country’s economic structure and how it shifts over time (e.g., industrialization, service dominance).
-
-🧠 Summary
-
-The mini-world reflects a globalized economy, where countries evolve economically, engage in trade, adopt or change currencies, and shift their industrial focus. This economic perspective enriches the existing geographic scope of the Mondial database and allows for complex querying and insightful data analysis.
-
-
-#
-#
+1. Combine geographic, political, and economic data in one query.
+2. Explore development paths and structural changes across countries.
+3. Track trade dynamics and currency evolution over time.
 
 
 ## 🔐 Keys & Consistency Constraints
@@ -111,5 +85,7 @@ Important fields like `Country.name` and `Currency.code` are declared `NOT NULL`
 
 These constraints collectively enforce **referential integrity**, **valid input ranges**, and **uniqueness** – ensuring the database remains consistent and accurate even during insertions or updates.
 
+🧠 Summary
 
+The mini-world reflects a globalized economy, where countries evolve economically, engage in trade, adopt or change currencies, and shift their industrial focus. This economic perspective enriches the existing geographic scope of the Mondial database and allows for complex querying and insightful data analysis.
 
