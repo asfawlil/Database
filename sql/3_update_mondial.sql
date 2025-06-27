@@ -12,7 +12,6 @@
             - Wrap in a transaction for atomicity
 ----------------------------------------------------------------------------- */
 
-BEGIN;  -- Begin transaction
 
 -- ============================================================================
 -- SECTION 1: PROVINCE EXTENSION
@@ -167,5 +166,3 @@ FROM
   student32.city_economic_data_extended
 ORDER BY
   name;
-
-COMMIT;  -- End transaction
