@@ -1,6 +1,6 @@
 -- ---------------------------------------------------------------
 -- Normalization & Data Modeling
--- Author: Liliana Asfaw (student38)
+-- Author: Liliana Asfaw (student38/329850)
 -- Schema design, database normal forms (1NF–3NF),
 -- Tables in 3NF including an abstract superclass
 -- ---------------------------------------------------------------

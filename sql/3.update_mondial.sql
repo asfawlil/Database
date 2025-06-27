@@ -1,6 +1,6 @@
 ---------------------------------------------------------------
 -- Mondial Extension: Population & Lakes
--- Author: Liliana Asfaw (student38)
+-- Author: Liliana Asfaw (student38/329850)
 ---------------------------------------------------------------
 
 -- Remove existing extended population table to prevent conflicts
