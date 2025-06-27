@@ -1,3 +1,4 @@
+
 /* -----------------------------------------------------------------------------
    FILE:    3_update_mondial_relations.sql
    PURPOSE: Extension & update of two Mondial relations:
@@ -166,3 +167,6 @@ FROM
   student32.city_economic_data_extended
 ORDER BY
   name;
+
+
+

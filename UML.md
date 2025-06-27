@@ -1,118 +1,93 @@
 # UML CLASS DIAGRAM
 
 ```mermaid
-classDiagram
+   classDiagram
+  %% ================ Basis-Tabelle ================
+  class country {
+    +code : VARCHAR(ISO) <<PK>>
+    name : TEXT
+  }
 
-class Currency {
-  +int currency_id
-  +varchar name
-  +char abbreviation
-  +numeric exchange_rate
-  +char country_code
-}
+  %% ================ student32 Schema ================
+  subgraph student32
+    class currency {
+      +code : VARCHAR(3) <<PK>>
+      name : TEXT
+      exchange_rate : NUMERIC
+      country_code : VARCHAR(4) <<FK>>
+    }
+    class gdp {
+      +id : SERIAL <<PK>>
+      year : INT
+      country_code : VARCHAR(4) <<FK>>
+      amount : NUMERIC
+      currency_code : VARCHAR(3) <<FK>>
+    }
+    class inflation {
+      +id : SERIAL <<PK>>
+      year : INT
+      country_code : VARCHAR(4) <<FK>>
+      rate : NUMERIC
+    }
+  end
 
-class GDP {
-  +int gdp_id
-  +int year
-  +numeric amount
-  +char country_code
-  +int currency_id
-}
+  %% student32 Beziehungen
+  country "1" o-- "0..*" currency        : country_code
+  currency "1" o-- "0..*" gdp           : currency_code
+  country  "1" o-- "0..*" gdp           : country_code
+  country  "1" o-- "0..*" inflation     : country_code
 
-class Inflation {
-  +int inflation_id
-  +int year
-  +numeric rate
-  +char country_code
-}
+  %% ================ default Schema ================
+  subgraph default
+    class CountryStats {
+      +year : INT <<PK>>
+      +country : TEXT
+      debt_amount : NUMERIC(15,2)
+      debt_currency : TEXT
+      internet_usage : NUMERIC(5,2)
+      co2_per_person : NUMERIC(15,2)
+      co2_unit : TEXT
+    }
+    class country_trade_industry {
+      +id : SERIAL <<PK>>
+      year : INT
+      country : VARCHAR(100)
+      export_amount : NUMERIC(10,2)
+      export_products : TEXT
+      import_amount : NUMERIC(10,2)
+      import_products : TEXT
+      industry_share_percent : NUMERIC(5,2)
+    }
+  end
 
-class Unemployment {
-  +int unemployment_id
-  +int year
-  +numeric rate
-  +char country_code
-}
+  %% ================ BIS2161 Schema ================
+  subgraph BIS2161
+    class unemployment {
+      +unemployment_id : SERIAL <<PK>>
+      country_code : CHAR(2) <<FK>>
+      country_name : VARCHAR(100)
+      year : SMALLINT
+      unemployment_rate : NUMERIC(5,2)
+    }
+    class average_salary {
+      +average_salary_id : SERIAL <<PK>>
+      country_code : CHAR(2) <<FK>>
+      country_name : VARCHAR(100)
+      year : SMALLINT
+      amount : NUMERIC(12,2)
+      currency_name : VARCHAR(50)
+    }
+    class minimum_wage {
+      +minimum_wage_id : SERIAL <<PK>>
+      country_code : CHAR(2) <<FK>>
+      country_name : VARCHAR(100)
+      year : SMALLINT
+      amount : NUMERIC(12,2)
+      currency_name : VARCHAR(50)
+    }
+  end
 
-class MinimumWage {
-  +int min_wage_id
-  +int year
-  +numeric amount
-  +char country_code
-  +int currency_id
-}
-
-class AverageSalary {
-  +int salary_id
-  +int year
-  +numeric amount
-  +char country_code
-  +int currency_id
-}
-
-class Exports {
-  +int export_id
-  +int year
-  +numeric value
-  +char country_code
-}
-
-class Imports {
-  +int import_id
-  +int year
-  +numeric value
-  +char country_code
-}
-
-class IndustryShare {
-  +int industry_id
-  +int year
-  +numeric percentage
-  +char country_code
-}
-
-class GovernmentDebt {
-  +int debt_id
-  +int year
-  +numeric amount
-  +char country_code
-  +int currency_id
-}
-
-class InternetPenetration {
-  +int penetration_id
-  +int year
-  +numeric percentage
-  +char country_code
-}
-
-class CO2Emissions {
-  +int co2_id
-  +int year
-  +numeric emissions
-  +char country_code
-  +varchar unit
-}
-
-class Country {
-  +char code
-  +varchar name
-}
-
-Country "1" --> "*" Currency : uses
-Currency "1" --> "*" GDP : referenced_by
-Currency "1" --> "*" MinimumWage : used_in
-Currency "1" --> "*" AverageSalary : used_in
-Currency "1" --> "*" GovernmentDebt : used_in
-
-Country "1" --> "*" GDP
-Country "1" --> "*" Inflation
-Country "1" --> "*" Unemployment
-Country "1" --> "*" MinimumWage
-Country "1" --> "*" AverageSalary
-Country "1" --> "*" Exports
-Country "1" --> "*" Imports
-Country "1" --> "*" IndustryShare
-Country "1" --> "*" GovernmentDebt
-Country "1" --> "*" InternetPenetration
-Country "1" --> "*" CO2Emissions
-```
+  %% BIS2161 Beziehungen
+  country "1" o-- "0..*" unemployment    : country_code
+  country "1" o-- "0..*" average_salary  : country_code
+  country "1" o-- "0..*" minimum_wage     : country_code
