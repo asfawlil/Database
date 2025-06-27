@@ -1,9 +1,6 @@
--- ============================================
 -- Mondial-Erweiterung: Bevölkerung & Seen
 -- Autorin: student38 ; Liliana Asfaw 
--- ============================================
 
- 
 -- ERWEITERUNG 1: Bevölkerung mit Zusatzdaten 
 
 DROP TABLE IF EXISTS student38.population_extended CASCADE;
@@ -26,34 +23,14 @@ ADD COLUMN life_expectancy NUMERIC;
 ALTER TABLE student38.population_extended
 ADD PRIMARY KEY (country, year);
 
--- Beispielwerte für DE & FR
-UPDATE student38.population_extended
-SET 
-  population_density = 233.1,
-  urban_percent = 77.5,
-  fertility_rate = 1.53,
-  migration_balance = 250000,
-  life_expectancy = 81.1
-WHERE country = 'D' AND year = 2023;
-
-UPDATE student38.population_extended
-SET 
-  population_density = 104.2,
-  urban_percent = 80.1,
-  fertility_rate = 1.41,
-  migration_balance = 30000,
-  life_expectancy = 82.7
-WHERE country = 'F' AND year = 2023;
-
--- Zufallsdaten für übrige Länder
+-- Zufallsdaten für alle Länder 
 UPDATE student38.population_extended
 SET 
   population_density = ROUND((RANDOM() * 200 + 30)::NUMERIC, 1),
   urban_percent = ROUND((RANDOM() * 50 + 50)::NUMERIC, 1),
   fertility_rate = ROUND((RANDOM() * 1.5 + 1.0)::NUMERIC, 2),
   migration_balance = ROUND((RANDOM() * 500000 - 250000)::NUMERIC),
-  life_expectancy = ROUND((RANDOM() * 15 + 65)::NUMERIC, 1)
-WHERE country NOT IN ('D', 'F');
+  life_expectancy = ROUND((RANDOM() * 15 + 65)::NUMERIC, 1);
 
 
 -- ERWEITERUNG 2: Seen mit Umwelt- & Tourismusdaten
@@ -94,7 +71,7 @@ FROM public.lake l
 JOIN public.located loc ON l.name = loc.lake
 JOIN public.country c ON loc.country = c.code;
 
--- Tourismus-/Umweltdaten generieren
+-- Zufallsdaten für alle Seen 
 UPDATE student38.lake_extended
 SET 
     tourist_rating = FLOOR(RANDOM() * 6 + 5)::INT,
@@ -111,11 +88,11 @@ SET
         WHEN name ILIKE '%reserv%' OR name ILIKE '%dam%' THEN 'reservoir'
         WHEN name ILIKE '%lake%' OR name ILIKE '%see%' THEN 'natural'
         ELSE CASE WHEN RANDOM() < 0.85 THEN 'natural' ELSE 'reservoir' END
-    END;
+    END,
+    height = COALESCE(height, ROUND((RANDOM() * 800 + 100)::NUMERIC, 1));
 
 -- ============================================
 -- Kontrolle
--- ============================================
 
 SELECT * FROM student38.population_extended ORDER BY country;
 SELECT * FROM student38.lake_extended ORDER BY country_name, name;
