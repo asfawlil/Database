@@ -1,5 +1,7 @@
--- Mondial-Erweiterung: Bevölkerung & Seen
--- Autorin: student38 ; Liliana Asfaw 
+---------------------------------------------------------------
+-- Mondial-Erweiterung: Bevölkerung & Seen (Population & Lakes)
+-- Autorin: Liliana Asfaw (student38)
+---------------------------------------------------------------
 
 -- ERWEITERUNG 1: Bevölkerung mit Zusatzdaten 
 
@@ -91,7 +93,7 @@ SET
     END,
     height = COALESCE(height, ROUND((RANDOM() * 800 + 100)::NUMERIC, 1));
 
--- ============================================
+-- ---------------------
 -- Kontrolle
 
 SELECT * FROM student38.population_extended ORDER BY country;

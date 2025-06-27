@@ -1,5 +1,8 @@
--- Arbeitsmarktdaten: Beispielhafte Einträge für das Jahr 2023
--- Autorin: student38 ; Liliana Asfaw 
+-- ---------------------------------------------------------------
+-- Arbeitsmarktdaten – Beispielhafte Einträge für das Jahr 2023
+-- Autorin: Liliana Asfaw (student38)
+-- Datenbasis für Vergleich & Auswertung in der Mondial-Erweiterung
+-- ---------------------------------------------------------------
 
 -- Arbeitslosenquote in Prozent
 INSERT INTO student38.unemployment (country_code, country_name, year, unemployment_rate) VALUES

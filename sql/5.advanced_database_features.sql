@@ -1,5 +1,7 @@
+-- ---------------------------------------------------------------
 -- Erweiterte SQL-Features: Views, Trigger & Stored Procedures
--- Autorin: student38 ; Liliana Asfaw 
+-- Autorin: Liliana Asfaw (student38)
+-- ---------------------------------------------------------------
 
 -- View: Übersicht aller Arbeitsmarktdaten 2023
 CREATE OR REPLACE VIEW student38.labor_market_summary_2023 AS

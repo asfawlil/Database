@@ -1,5 +1,9 @@
--- Zweck: Normalisierung und Datenmodellierung 
--- Autorin: student38 ; Liliana Asfaw 
+-- ---------------------------------------------------------------
+-- Normalisierung & Datenmodellierung
+-- Autorin: Liliana Asfaw (student38)
+-- Strukturentwurf, Datenbanknormalformen (1NF–3NF),
+-- Tabellen in 3NF inkl. abstrakter Oberklasse
+-- ---------------------------------------------------------------
 
 -- 1. Tabelle: Minimum Wage
 CREATE TABLE student38.minimum_wage (

@@ -1,5 +1,10 @@
+-- ---------------------------------------------------------------
 -- Komplexe Auswertungen zum Arbeitsmarkt
--- Autorin: student38 ; Liliana Asfaw 
+-- Autorin: Liliana Asfaw (student38)
+-- Ziel: Analyse und Vergleich arbeitsmarktrelevanter Kennzahlen 
+--       wie Arbeitslosenquote, Durchschnittslohn und Mindestlohn
+-- ---------------------------------------------------------------
+
 
 -- Query 1: Mindestlohn im Verhältnis zum Durchschnittslohn
 -- Ziel: Wie viel Prozent des Ø-Lohns macht der Mindestlohn aus?
