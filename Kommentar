@@ -5,7 +5,7 @@ wir möchten Sie kurz über ein Problem informieren, das bei unserer GitHub-Arbe
 Merge-Richtung vertauscht: Jedes Mal, wenn wir Änderungen aus unseren persönlichen Branches in den Branch main einpflegen wollten, wurde stattdessen der umgekehrte Merge ausgelöst – also Inhalte aus main in unsere Branches übernommen. Das führte zu unerwünschten Versionierungen und zusätzlichen Konflikten.
 
 Unterschiedliche Interpretationen der Aufgabenstellung: Innerhalb der Gruppe gab es teilweise unterschiedliche Auffassungen über die Umsetzung einzelner Teilaufgaben. Deshalb sind unsere SQL-Skripte und Tabellenstrukturen in den jeweiligen Branches unterschiedlich aufgebaut.
-Alle persönlichen Code-Stände befinden sich aber vollständig in den jeweiligen persönlichen Branches.
+Alle persönlichen und aktualle Code-Stände befinden sich aber vollständig in den jeweiligen persönlichen Branches.
 
 Mit freundlichen Grüßen
 Gruppe G
