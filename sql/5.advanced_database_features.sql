@@ -1,9 +1,9 @@
 -- ---------------------------------------------------------------
--- Erweiterte SQL-Features: Views, Trigger & Stored Procedures
--- Autorin: Liliana Asfaw (student38)
+-- Advanced SQL Features: Views, Triggers & Stored Procedures
+-- Author: Liliana Asfaw (student38)
 -- ---------------------------------------------------------------
 
--- View: Übersicht aller Arbeitsmarktdaten 2023
+-- View: Overview of all labor market data for 2023
 CREATE OR REPLACE VIEW student38.labor_market_summary_2023 AS
 SELECT
   u.country_name,
@@ -17,40 +17,40 @@ JOIN student38.average_salary a ON u.country_code = a.country_code AND u.year = 
 JOIN student38.minimum_wage m ON u.country_code = m.country_code AND u.year = m.year
 WHERE u.year = 2023;
 
--- Trigger-Funktion: Mindestlohn darf nicht < 1000 EUR sein (falls gesetzt)
+-- Trigger Function: Minimum wage must not be < 1000 EUR (if set)
 CREATE OR REPLACE FUNCTION student38.check_minimum_wage()
 RETURNS TRIGGER AS $$
 BEGIN
   IF NEW.amount IS NOT NULL AND NEW.amount < 1000 THEN
-    RAISE EXCEPTION 'Mindestlohn darf nicht unter 1000 EUR liegen: %', NEW.amount;
+    RAISE EXCEPTION 'Minimum wage must not be below 1000 EUR: %', NEW.amount;
   END IF;
   RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
 
--- Trigger-Funktion: Durchschnittslohn muss positiv sein
+-- Trigger Function: Average salary must be positive
 CREATE OR REPLACE FUNCTION student38.check_average_salary()
 RETURNS TRIGGER AS $$
 BEGIN
   IF NEW.amount <= 0 THEN
-    RAISE EXCEPTION 'Durchschnittslohn muss positiv sein: %', NEW.amount;
+    RAISE EXCEPTION 'Average salary must be positive: %', NEW.amount;
   END IF;
   RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
 
--- Trigger-Funktion: Arbeitslosenquote muss zwischen 0 und 100 liegen
+-- Trigger Function: Unemployment rate must be between 0 and 100
 CREATE OR REPLACE FUNCTION student38.check_unemployment_rate()
 RETURNS TRIGGER AS $$
 BEGIN
   IF NEW.unemployment_rate < 0 OR NEW.unemployment_rate > 100 THEN
-    RAISE EXCEPTION 'Arbeitslosenquote muss zwischen 0 und 100 liegen: %', NEW.unemployment_rate;
+    RAISE EXCEPTION 'Unemployment rate must be between 0 and 100: %', NEW.unemployment_rate;
   END IF;
   RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
 
--- Trigger-Registrierung
+-- Trigger Registration
 DROP TRIGGER IF EXISTS trg_check_min_wage ON student38.minimum_wage;
 CREATE TRIGGER trg_check_min_wage
 BEFORE INSERT OR UPDATE ON student38.minimum_wage
@@ -69,7 +69,7 @@ BEFORE INSERT OR UPDATE ON student38.unemployment
 FOR EACH ROW
 EXECUTE FUNCTION student38.check_unemployment_rate();
 
--- Stored Procedure: Durchschnittslohn einfügen oder aktualisieren
+-- Stored Procedure: Insert or update average salary
 CREATE OR REPLACE PROCEDURE student38.upsert_average_salary(
   p_country_code CHAR(2),
   p_country_name VARCHAR,
@@ -93,7 +93,7 @@ BEGIN
 END;
 $$;
 
--- Stored Procedure: Mindestlohn einfügen oder aktualisieren
+-- Stored Procedure: Insert or update minimum wage
 CREATE OR REPLACE PROCEDURE student38.upsert_minimum_wage(
   p_country_code CHAR(2),
   p_country_name VARCHAR,
@@ -117,7 +117,7 @@ BEGIN
 END;
 $$;
 
--- Stored Procedure: Arbeitslosenquote einfügen oder aktualisieren
+-- Stored Procedure: Insert or update unemployment rate
 CREATE OR REPLACE PROCEDURE student38.upsert_unemployment(
   p_country_code CHAR(2),
   p_country_name VARCHAR,

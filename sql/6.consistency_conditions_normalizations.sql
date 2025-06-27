@@ -1,11 +1,11 @@
 -- ---------------------------------------------------------------
--- Normalisierung & Datenmodellierung
--- Autorin: Liliana Asfaw (student38)
--- Strukturentwurf, Datenbanknormalformen (1NF–3NF),
--- Tabellen in 3NF inkl. abstrakter Oberklasse
+-- Normalization & Data Modeling
+-- Author: Liliana Asfaw (student38)
+-- Schema design, database normal forms (1NF–3NF),
+-- Tables in 3NF including an abstract superclass
 -- ---------------------------------------------------------------
 
--- 1. Tabelle: Minimum Wage
+-- 1. Table: Minimum Wage
 CREATE TABLE student38.minimum_wage (
     minimum_wage_id SERIAL PRIMARY KEY,
     country_code CHAR(2) NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE student38.minimum_wage (
     UNIQUE (country_code, year)
 );
 
--- 2. Tabelle: Average Salary
+-- 2. Table: Average Salary
 CREATE TABLE student38.average_salary (
     average_salary_id SERIAL PRIMARY KEY,
     country_code CHAR(2) NOT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE student38.average_salary (
     UNIQUE (country_code, year)
 );
 
--- 3. Tabelle: Unemployment
+-- 3. Table: Unemployment
 CREATE TABLE student38.unemployment (
     unemployment_id SERIAL PRIMARY KEY,
     country_code CHAR(2) NOT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE student38.unemployment (
     UNIQUE (country_code, year)
 );
 
--- Erweiterte Struktur: Abstrakte Oberklasse
+-- Extended Structure: Abstract Superclass
 CREATE TABLE student38.labor_data (
     data_id SERIAL PRIMARY KEY,
     data_type VARCHAR(30) NOT NULL CHECK (data_type IN ('MinimumWage', 'AverageSalary', 'Unemployment')),
@@ -49,7 +49,7 @@ CREATE TABLE student38.labor_data (
     FOREIGN KEY (unemployment_id) REFERENCES student38.unemployment(unemployment_id) ON DELETE CASCADE
 );
 
--- Alle Tabellen erfüllen:
--- 1NF: Alle Felder atomar 
--- 2NF: Keine partiellen Abhängigkeiten 
--- 3NF: Keine transitiven Abhängigkeiten
+-- All tables fulfill:
+-- 1NF: All fields are atomic
+-- 2NF: No partial dependencies
+-- 3NF: No transitive dependencies
