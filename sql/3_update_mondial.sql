@@ -1,1131 +1,171 @@
--- Update inflation rates for various countries in the myeconomy table
-UPDATE myeconomy SET inflation = -6.60118564073726 WHERE country = 'AFG';
-UPDATE myeconomy SET inflation = 28.2404948915772 WHERE country = 'AGO';
-UPDATE myeconomy SET inflation = 2.21448953273294 WHERE country = 'AL';
-UPDATE myeconomy SET inflation = 0.269511978259125 WHERE country = 'ARM';
-UPDATE myeconomy SET inflation = 3.1616142830575 WHERE country = 'A';
-UPDATE myeconomy SET inflation = 2.93791574279383 WHERE country = 'AZ';
-UPDATE myeconomy SET inflation = 2.21217188919901 WHERE country = 'BI';
-UPDATE myeconomy SET inflation = 20.2124925027847 WHERE country = 'B';
-UPDATE myeconomy SET inflation = 3.14349136500041 WHERE country = 'BEN';
-UPDATE myeconomy SET inflation = 4.19113446375394 WHERE country = 'BD';
-UPDATE myeconomy SET inflation = 10.4657482763412 WHERE country = 'BG';
-UPDATE myeconomy SET inflation = 2.44651943006079 WHERE country = 'BRN';
-UPDATE myeconomy SET inflation = 0.919635459817651 WHERE country = 'BS';
-UPDATE myeconomy SET inflation = 1.69212733599724 WHERE country = 'BY';
-UPDATE myeconomy SET inflation = 5.78531910428 WHERE country = 'BZ';
-UPDATE myeconomy SET inflation = 3.28955985952768 WHERE country = 'BERM';
-UPDATE myeconomy SET inflation = 5.09976568317427 WHERE country = 'BR';
-UPDATE myeconomy SET inflation = 4.36746407652337 WHERE country = 'BDS';
-UPDATE myeconomy SET inflation = -0.388674165036461 WHERE country = 'RB';
-UPDATE myeconomy SET inflation = 2.76131569624098 WHERE country = 'RCA';
-UPDATE myeconomy SET inflation = 2.81835131676251 WHERE country = 'CDN';
-UPDATE myeconomy SET inflation = 2.38158383281173 WHERE country = 'CHE';
-UPDATE myeconomy SET inflation = 1.06234041976595 WHERE country = 'RCH';
-UPDATE myeconomy SET inflation = 4.29763891572524 WHERE country = 'CI';
-UPDATE myeconomy SET inflation = 0.218128938439177 WHERE country = 'CMR';
-UPDATE myeconomy SET inflation = 3.46637314660165 WHERE country = 'CGO';
-UPDATE myeconomy SET inflation = 6.60908593728228 WHERE country = 'CPV';
-UPDATE myeconomy SET inflation = -0.41345934225229 WHERE country = 'CUR';
-UPDATE myeconomy SET inflation = 1.80023018624815 WHERE country = 'DJI';
-UPDATE myeconomy SET inflation = 2.43531202435314 WHERE country = 'WD';
-UPDATE myeconomy SET inflation = 2.2564981433876 WHERE country = 'DK';
-UPDATE myeconomy SET inflation = 1.37220049768918 WHERE country = 'EAP';
-UPDATE myeconomy SET inflation = 3.30223338951227 WHERE country = 'EAR';
-UPDATE myeconomy SET inflation = 4.04611455313434 WHERE country = 'EAS';
-UPDATE myeconomy SET inflation = 1.54732515615369 WHERE country = 'ESP';
-UPDATE myeconomy SET inflation = 2.77417826534772 WHERE country = 'FCS';
-UPDATE myeconomy SET inflation = 3.52056053296586 WHERE country = 'SF';
-UPDATE myeconomy SET inflation = 1.56568906231616 WHERE country = 'FSM';
-UPDATE myeconomy SET inflation = 1.99904942291463 WHERE country = 'GBR';
-UPDATE myeconomy SET inflation = 1.17311998381218 WHERE country = 'RG';
-UPDATE myeconomy SET inflation = 3.2715729463592 WHERE country = 'WAG';
-UPDATE myeconomy SET inflation = 1.10971758022096 WHERE country = 'GUB';
-UPDATE myeconomy SET inflation = 22.8483281157842 WHERE country = 'GQ';
-UPDATE myeconomy SET inflation = 8.12313914948596 WHERE country = 'WG';
-UPDATE myeconomy SET inflation = 2.74149045788606 WHERE country = 'HK';
-UPDATE myeconomy SET inflation = 2.86919482222022 WHERE country = 'HR';
-UPDATE myeconomy SET inflation = 2.90395226446373 WHERE country = 'H';
-UPDATE myeconomy SET inflation = 1.72972119105914 WHERE country = 'IBT';
-UPDATE myeconomy SET inflation = 4.60621098127107 WHERE country = 'IDA';
-UPDATE myeconomy SET inflation = 3.70370370370369 WHERE country = 'IND';
-UPDATE myeconomy SET inflation = 4.95303550973656 WHERE country = 'JOR';
-UPDATE myeconomy SET inflation = 2.11344999577317 WHERE country = 'KAZ';
-UPDATE myeconomy SET inflation = 5.85683849970066 WHERE country = 'KHM';
-UPDATE myeconomy SET inflation = 3.07052614744924 WHERE country = 'KIR';
-UPDATE myeconomy SET inflation = 0.982373023061417 WHERE country = 'KNA';
-UPDATE myeconomy SET inflation = 5.41194447981659 WHERE country = 'KOR';
-UPDATE myeconomy SET inflation = 2.73853681635241 WHERE country = 'LAC';
-UPDATE myeconomy SET inflation = 4.85655589318192 WHERE country = 'LAO';
-UPDATE myeconomy SET inflation = 4.48978854243448 WHERE country = 'LBR';
-UPDATE myeconomy SET inflation = 2.32174328643542 WHERE country = 'LIC';
-UPDATE myeconomy SET inflation = 2.89855072463762 WHERE country = 'LKA';
-UPDATE myeconomy SET inflation = 23.1305695942588 WHERE country = 'LMY';
-UPDATE myeconomy SET inflation = 2.12615766885025 WHERE country = 'LTU';
-UPDATE myeconomy SET inflation = -0.42936004906973 WHERE country = 'MDA';
-UPDATE myeconomy SET inflation = 6.10544624245032 WHERE country = 'MEA';
-UPDATE myeconomy SET inflation = 0.715735835228723 WHERE country = 'MHL';
-UPDATE myeconomy SET inflation = 2.05113269954859 WHERE country = 'MIC';
-UPDATE myeconomy SET inflation = 1.26579885828729 WHERE country = 'MKD';
-UPDATE myeconomy SET inflation = 0.985256592004507 WHERE country = 'MMR';
-UPDATE myeconomy SET inflation = 4.67773516007048 WHERE country = 'MNE';
-UPDATE myeconomy SET inflation = 1.39979779674928 WHERE country = 'MOZ';
-UPDATE myeconomy SET inflation = 4.72225588452932 WHERE country = 'MUS';
-UPDATE myeconomy SET inflation = 3.48974086026947 WHERE country = 'NAC';
-UPDATE myeconomy SET inflation = 3.20639864099652 WHERE country = 'NAM';
-UPDATE myeconomy SET inflation = 3.33675009282281 WHERE country = 'NLD';
-UPDATE myeconomy SET inflation = 6.80284899332961 WHERE country = 'NOR';
-UPDATE myeconomy SET inflation = 4.10263226568006 WHERE country = 'OED';
-UPDATE myeconomy SET inflation = 32.1796504225025 WHERE country = 'OMN';
-UPDATE myeconomy SET inflation = 1.834100204499 WHERE country = 'OSS';
-UPDATE myeconomy SET inflation = 4.23903922877036 WHERE country = 'PAN';
-UPDATE myeconomy SET inflation = 9.07151997725013 WHERE country = 'PHL';
-UPDATE myeconomy SET inflation = 4.62473841057141 WHERE country = 'PNG';
-UPDATE myeconomy SET inflation = 3.34754304219953 WHERE country = 'POL';
-UPDATE myeconomy SET inflation = 3.14530134431073 WHERE country = 'PRE';
-UPDATE myeconomy SET inflation = 2.92279782301957 WHERE country = 'PRY';
-UPDATE myeconomy SET inflation = 12.6325318530452 WHERE country = 'QAT';
-UPDATE myeconomy SET inflation = 0.685197879812108 WHERE country = 'ROU';
-UPDATE myeconomy SET inflation = 2.00770739412712 WHERE country = 'RUS';
-UPDATE myeconomy SET inflation = 3.21260487006347 WHERE country = 'RWA';
-UPDATE myeconomy SET inflation = 2.23172772921704 WHERE country = 'SAS';
-UPDATE myeconomy SET inflation = 0.602403921107917 WHERE country = 'SAU';
-UPDATE myeconomy SET inflation = 3.7842600751287 WHERE country = 'SDN';
-UPDATE myeconomy SET inflation = 2.41613187791884 WHERE country = 'SLE';
-UPDATE myeconomy SET inflation = 3.83540271728533 WHERE country = 'ES';
-UPDATE myeconomy SET inflation = 1.26734310292375 WHERE country = 'SST';
-UPDATE myeconomy SET inflation = -4.5191101423114 WHERE country = 'STP';
-UPDATE myeconomy SET inflation = 1.77029240198635 WHERE country = 'SVK';
-UPDATE myeconomy SET inflation = 1.68792112375817 WHERE country = 'SWE';
-UPDATE myeconomy SET inflation = 2.36645846996694 WHERE country = 'SYC';
-UPDATE myeconomy SET inflation = 28.6337500014115 WHERE country = 'TCH';
-UPDATE myeconomy SET inflation = 0.853782292567288 WHERE country = 'TEA';
-UPDATE myeconomy SET inflation = 1.24216507945569 WHERE country = 'TEC';
-UPDATE myeconomy SET inflation = 4.6705297488997 WHERE country = 'THA';
-UPDATE myeconomy SET inflation = 16.2296159130279 WHERE country = 'TSA';
-UPDATE myeconomy SET inflation = 2.75760909424272 WHERE country = 'TSS';
-UPDATE myeconomy SET inflation = 1.96562656432512 WHERE country = 'TTO';
-UPDATE myeconomy SET inflation = 2.83581658224034 WHERE country = 'TUN';
-UPDATE myeconomy SET inflation = 0.311726050919668 WHERE country = 'TZA';
-UPDATE myeconomy SET inflation = 8.89950732263761 WHERE country = 'UMC';
-UPDATE myeconomy SET inflation = 2.06284153005468 WHERE country = 'WSM';
-UPDATE myeconomy SET inflation = 3.18364611260058 WHERE country = 'ZAF';
-UPDATE myeconomy SET inflation = 0.526884625776839 WHERE country = 'TTO';
-UPDATE myeconomy SET inflation = 7.20661657168794 WHERE country = 'TUN';
-UPDATE myeconomy SET inflation = 58.5064507300343 WHERE country = 'TUR';
-UPDATE myeconomy SET inflation = 3.05694676312373 WHERE country = 'TZA';
-UPDATE myeconomy SET inflation = 3.3233806708656 WHERE country = 'UGA';
-UPDATE myeconomy SET inflation = 6.50198464669254 WHERE country = 'UKR';
-UPDATE myeconomy SET inflation = 4.84914366613156 WHERE country = 'URY';
-UPDATE myeconomy SET inflation = 2.94952520485207 WHERE country = 'USA';
-UPDATE myeconomy SET inflation = 9.62825465956682 WHERE country = 'UZB';
-UPDATE myeconomy SET inflation = 3.62770736940927 WHERE country = 'VCT';
-UPDATE myeconomy SET inflation = 3.62109273885843 WHERE country = 'VNM';
-UPDATE myeconomy SET inflation = 2.17245530514377 WHERE country = 'WSM';
-UPDATE myeconomy SET inflation = 1.61944994559476 WHERE country = 'XKX';
-UPDATE myeconomy SET inflation = 4.36115246518962 WHERE country = 'ZAF';
+/* -----------------------------------------------------------------------------
+   FILE:    3_update_mondial_relations.sql
+   PURPOSE: Extension & update of two Mondial relations:
+            1) student32.province_economy_extended
+            2) student32.city_economic_data_extended
+   SCHEMA:  student32 (Economy indicators)
+   AUTHOR:  Njomza Bytyqi (student32 / 330021)
+   NOTES:   - All DDL and DML steps are idempotent (use IF EXISTS / IF NOT EXISTS)
+            - Clear separation of DDL and DML sections
+            - Consistent uppercase for SQL keywords
+            - Semicolons at end of each statement
+            - Wrap in a transaction for atomicity
+----------------------------------------------------------------------------- */
 
--- Update GDP for various countries in the myeconomy table
-UPDATE myeconomy SET gdp = 84824654481.7249 WHERE country = 'AGO';
-UPDATE myeconomy SET gdp = 1245472471675.95 WHERE country = 'AFE';
-UPDATE myeconomy SET gdp = 17233051620.1117 WHERE country = 'AFG';
-UPDATE myeconomy SET gdp = 799105950273.831 WHERE country = 'AFW';
-UPDATE myeconomy SET gdp = 84824654481.7249 WHERE country = 'AGO';
-UPDATE myeconomy SET gdp = 23547179830.4413 WHERE country = 'AL';
-UPDATE myeconomy SET gdp = 3785067331.7625 WHERE country = 'AND';
-UPDATE myeconomy SET gdp = 3512421040998.19 WHERE country = 'ARB';
-UPDATE myeconomy SET gdp = 514130432653.081 WHERE country = 'ARE';
-UPDATE myeconomy SET gdp = 646075277525.125 WHERE country = 'RA';
-UPDATE myeconomy SET gdp = 24085749592.3359 WHERE country = 'ARM';
-UPDATE myeconomy SET gdp = 2033085185.18518 WHERE country = 'AG';
-UPDATE myeconomy SET gdp = 1728057316695.61 WHERE country = 'AUS';
-UPDATE myeconomy SET gdp = 511685203845.001 WHERE country = 'A';
-UPDATE myeconomy SET gdp = 72356176470.5882 WHERE country = 'AZ';
-UPDATE myeconomy SET gdp = 2642161668.85211 WHERE country = 'BI';
-UPDATE myeconomy SET gdp = 644782756682.756 WHERE country = 'B';
-UPDATE myeconomy SET gdp = 19676049075.7011 WHERE country = 'BEN';
-UPDATE myeconomy SET gdp = 20324617844.5265 WHERE country = 'BF';
-UPDATE myeconomy SET gdp = 437415331040.994 WHERE country = 'BD';
-UPDATE myeconomy SET gdp = 102407653020.606 WHERE country = 'BG';
-UPDATE myeconomy SET gdp = 46079867021.2766 WHERE country = 'BRN';
-UPDATE myeconomy SET gdp = 14338500000 WHERE country = 'BS';
-UPDATE myeconomy SET gdp = 27514782476.0406 WHERE country = 'BIH';
-UPDATE myeconomy SET gdp = 71857382745.6066 WHERE country = 'BY';
-UPDATE myeconomy SET gdp = 3066850000 WHERE country = 'BZ';
-UPDATE myeconomy SET gdp = 8141700000 WHERE country = 'BERM';
-UPDATE myeconomy SET gdp = 45135398008.8166 WHERE country = 'BOL';
-UPDATE myeconomy SET gdp = 2173665655937.27 WHERE country = 'BR';
-UPDATE myeconomy SET gdp = 6720733200 WHERE country = 'BDS';
-UPDATE myeconomy SET gdp = 15128292980.8638 WHERE country = 'BRU';
-UPDATE myeconomy SET gdp = 19396084498.0084 WHERE country = 'RB';
-UPDATE myeconomy SET gdp = 2555492085.24831 WHERE country = 'RCA';
-UPDATE myeconomy SET gdp = 2142470914401.36 WHERE country = 'CDN';
-UPDATE myeconomy SET gdp = 2267760561102.28 WHERE country = 'CEB';
-UPDATE myeconomy SET gdp = 884940402230.409 WHERE country = 'CHE';
-UPDATE myeconomy SET gdp = 12507927144.1342 WHERE country = 'CHI';
-UPDATE myeconomy SET gdp = 335533331669.219 WHERE country = 'RCH';
-UPDATE myeconomy SET gdp = 17794783039552 WHERE country = 'CN';
-UPDATE myeconomy SET gdp = 78875489245.0538 WHERE country = 'CI';
-UPDATE myeconomy SET gdp = 49279410982.826 WHERE country = 'CMR';
-UPDATE myeconomy SET gdp = 66383287002.9867 WHERE country = 'CGO';
-UPDATE myeconomy SET gdp = 15321055822.5167 WHERE country = 'RCB';
-UPDATE myeconomy SET gdp = 363493841244.303 WHERE country = 'CO';
-UPDATE myeconomy SET gdp = 1352380971.24055 WHERE country = 'COM';
-UPDATE myeconomy SET gdp = 2533819406.4916 WHERE country = 'CPV';
-UPDATE myeconomy SET gdp = 86497941439.0174 WHERE country = 'CR';
-UPDATE myeconomy SET gdp = 53296161046.3074 WHERE country = 'CSS';
-UPDATE myeconomy SET gdp = 3281419347.37053 WHERE country = 'CUR';
-UPDATE myeconomy SET gdp = 7139428557.71423 WHERE country = 'CAYM';
-UPDATE myeconomy SET gdp = 33886930712.3394 WHERE country = 'CY';
-UPDATE myeconomy SET gdp = 343207874553.734 WHERE country = 'CZ';
-UPDATE myeconomy SET gdp = 4525703903627.53 WHERE country = 'D';
-UPDATE myeconomy SET gdp = 4098530513.55777 WHERE country = 'DJI';
-UPDATE myeconomy SET gdp = 653992592.592593 WHERE country = 'WD';
-UPDATE myeconomy SET gdp = 407091920305.404 WHERE country = 'DK';
-UPDATE myeconomy SET gdp = 121444279313.931 WHERE country = 'DOM';
-UPDATE myeconomy SET gdp = 247626161016.414 WHERE country = 'DZA';
-UPDATE myeconomy SET gdp = 21162836277192.4 WHERE country = 'EAP';
-UPDATE myeconomy SET gdp = 14945896099125.4 WHERE country = 'EAR';
-UPDATE myeconomy SET gdp = 30780176881541.3 WHERE country = 'EAS';
-UPDATE myeconomy SET gdp = 2129704371516.14 WHERE country = 'ECA';
-UPDATE myeconomy SET gdp = 27554069781140.1 WHERE country = 'ECS';
-UPDATE myeconomy SET gdp = 118844826000 WHERE country = 'EC';
-UPDATE myeconomy SET gdp = 396002496996.96 WHERE country = 'ET';
-UPDATE myeconomy SET gdp = 15780686672317.3 WHERE country = 'EMU';
-UPDATE myeconomy SET gdp = 1620090734956.89 WHERE country = 'ESP';
-UPDATE myeconomy SET gdp = 41291245222.1948 WHERE country = 'EST';
-UPDATE myeconomy SET gdp = 163697927593.982 WHERE country = 'ETH';
-UPDATE myeconomy SET gdp = 18590720056635.3 WHERE country = 'EUU';
-UPDATE myeconomy SET gdp = 1937937125126.32 WHERE country = 'FCS';
-UPDATE myeconomy SET gdp = 295532341254.907 WHERE country = 'SF';
-UPDATE myeconomy SET gdp = 5442046565.04719 WHERE country = 'FJI';
-UPDATE myeconomy SET gdp = 3051831611384.76 WHERE country = 'F';
-UPDATE myeconomy SET gdp = 3907323961.33964 WHERE country = 'FO';
-UPDATE myeconomy SET gdp = 460000000 WHERE country = 'FSM';
-UPDATE myeconomy SET gdp = 19388402541.6698 WHERE country = 'GAB';
-UPDATE myeconomy SET gdp = 3380854520809.54 WHERE country = 'GBR';
-UPDATE myeconomy SET gdp = 30777833585.4441 WHERE country = 'GE';
-UPDATE myeconomy SET gdp = 76370396722.154 WHERE country = 'GH';
-UPDATE myeconomy SET gdp = 22199409741.2578 WHERE country = 'RG';
-UPDATE myeconomy SET gdp = 2396111021.64149 WHERE country = 'WAG';
-UPDATE myeconomy SET gdp = 2048348108.35852 WHERE country = 'GUB';
-UPDATE myeconomy SET gdp = 12337550583.754 WHERE country = 'GQ';
-UPDATE myeconomy SET gdp = 243498333237.802 WHERE country = 'GR';
-UPDATE myeconomy SET gdp = 1316733333.33333 WHERE country = 'WG';
-UPDATE myeconomy SET gdp = 104450210572.012 WHERE country = 'GCA';
-UPDATE myeconomy SET gdp = 17159509565.4676 WHERE country = 'GUY';
-UPDATE myeconomy SET gdp = 68276492853979.9 WHERE country = 'HIC';
-UPDATE myeconomy SET gdp = 380812234827.832 WHERE country = 'HK';
-UPDATE myeconomy SET gdp = 34400509852.0436 WHERE country = 'HN';
-UPDATE myeconomy SET gdp = 1129946910802.31 WHERE country = 'HPC';
-UPDATE myeconomy SET gdp = 84393795502.4421 WHERE country = 'HR';
-UPDATE myeconomy SET gdp = 19850829757.5418 WHERE country = 'RH';
-UPDATE myeconomy SET gdp = 212388906458.724 WHERE country = 'H';
-UPDATE myeconomy SET gdp = 38789302232983.5 WHERE country = 'IBD';
-UPDATE myeconomy SET gdp = 41669008262158.8 WHERE country = 'IBT';
-UPDATE myeconomy SET gdp = 2880514996348.02 WHERE country = 'IDA';
-UPDATE myeconomy SET gdp = 1068437562493.42 WHERE country = 'IDB';
-UPDATE myeconomy SET gdp = 1371171152331.16 WHERE country = 'IDN';
-UPDATE myeconomy SET gdp = 1814046621127.36 WHERE country = 'IDX';
-UPDATE myeconomy SET gdp = 3567551674623.01 WHERE country = 'IND';
-UPDATE myeconomy SET gdp = 551394889339.778 WHERE country = 'IRL';
-UPDATE myeconomy SET gdp = 404625655204.619 WHERE country = 'IRN';
-UPDATE myeconomy SET gdp = 250842782139.464 WHERE country = 'IRQ';
-UPDATE myeconomy SET gdp = 31325116556.3807 WHERE country = 'IS';
-UPDATE myeconomy SET gdp = 513611100815.691 WHERE country = 'ISR';
-UPDATE myeconomy SET gdp = 2300941152991.81 WHERE country = 'ITA';
-UPDATE myeconomy SET gdp = 19423355409.2316 WHERE country = 'JAM';
-UPDATE myeconomy SET gdp = 50967475352.1127 WHERE country = 'JOR';
-UPDATE myeconomy SET gdp = 4204494802431.55 WHERE country = 'JPN';
-UPDATE myeconomy SET gdp = 262641892078.524 WHERE country = 'KAZ';
-UPDATE myeconomy SET gdp = 108038588970.595 WHERE country = 'KEN';
-UPDATE myeconomy SET gdp = 13987627908.8381 WHERE country = 'KGZ';
-UPDATE myeconomy SET gdp = 42335646895.7984 WHERE country = 'KHM';
-UPDATE myeconomy SET gdp = 279208903.337644 WHERE country = 'KIR';
-UPDATE myeconomy SET gdp = 1055499777.77778 WHERE country = 'KNA';
-UPDATE myeconomy SET gdp = 1712792854202.37 WHERE country = 'KOR';
-UPDATE myeconomy SET gdp = 163704878875.85 WHERE country = 'KWT';
-UPDATE myeconomy SET gdp = 6057469575864.84 WHERE country = 'LAC';
-UPDATE myeconomy SET gdp = 15843155731.2552 WHERE country = 'LAO';
-UPDATE myeconomy SET gdp = 4240000000 WHERE country = 'LBR';
-UPDATE myeconomy SET gdp = 45096462972.4014 WHERE country = 'LBY';
-UPDATE myeconomy SET gdp = 2430148148.14815 WHERE country = 'LCA';
-UPDATE myeconomy SET gdp = 7100142198622.08 WHERE country = 'LCN';
-UPDATE myeconomy SET gdp = 1516309568380.52 WHERE country = 'LDC';
-UPDATE myeconomy SET gdp = 663529162731.73 WHERE country = 'LIC';
-UPDATE myeconomy SET gdp = 84356863743.6335 WHERE country = 'LKA';
-UPDATE myeconomy SET gdp = 7439509140290.38 WHERE country = 'LMC';
-UPDATE myeconomy SET gdp = 37533765909928 WHERE country = 'LMY';
-UPDATE myeconomy SET gdp = 2117962450.79469 WHERE country = 'LSO';
-UPDATE myeconomy SET gdp = 28348483457826.9 WHERE country = 'LTE';
-UPDATE myeconomy SET gdp = 79789877416.1681 WHERE country = 'LTU';
-UPDATE myeconomy SET gdp = 85755006123.5976 WHERE country = 'LUX';
-UPDATE myeconomy SET gdp = 42247850064.5125 WHERE country = 'LVA';
-UPDATE myeconomy SET gdp = 45803067940.4072 WHERE country = 'MAC';
-UPDATE myeconomy SET gdp = 144417103249.646 WHERE country = 'MAR';
-UPDATE myeconomy SET gdp = 9995350547.12166 WHERE country = 'MCO';
-UPDATE myeconomy SET gdp = 16539436547.295 WHERE country = 'MDA';
-UPDATE myeconomy SET gdp = 15790113246.7478 WHERE country = 'MDG';
-UPDATE myeconomy SET gdp = 6590894301.9579 WHERE country = 'MDV';
-UPDATE myeconomy SET gdp = 4320566779119.19 WHERE country = 'MEA';
-UPDATE myeconomy SET gdp = 1789114434843.46 WHERE country = 'MEX';
-UPDATE myeconomy SET gdp = 259300000 WHERE country = 'MHL';
-UPDATE myeconomy SET gdp = 36878123654872.8 WHERE country = 'MIC';
-UPDATE myeconomy SET gdp = 15763621848.115 WHERE country = 'MKD';
-UPDATE myeconomy SET gdp = 20661794596.0873 WHERE country = 'MLI';
-UPDATE myeconomy SET gdp = 22328640241.5553 WHERE country = 'MLT';
-UPDATE myeconomy SET gdp = 66757619000 WHERE country = 'MMR';
-UPDATE myeconomy SET gdp = 1671174615296.29 WHERE country = 'MNA';
-UPDATE myeconomy SET gdp = 7530593375.22034 WHERE country = 'MNE';
-UPDATE myeconomy SET gdp = 20325121393.9074 WHERE country = 'MNG';
-UPDATE myeconomy SET gdp = 20954220983.5473 WHERE country = 'MOZ';
-UPDATE myeconomy SET gdp = 10651709411.4594 WHERE country = 'MRT';
-UPDATE myeconomy SET gdp = 14644524819.0054 WHERE country = 'MUS';
-UPDATE myeconomy SET gdp = 12712150082.0792 WHERE country = 'MWI';
-UPDATE myeconomy SET gdp = 399705169318.477 WHERE country = 'MYS';
-UPDATE myeconomy SET gdp = 29871321614401.4 WHERE country = 'NAC';
-UPDATE myeconomy SET gdp = 12351025066.9131 WHERE country = 'NAM';
-UPDATE myeconomy SET gdp = 16819170420.5653 WHERE country = 'NER';
-UPDATE myeconomy SET gdp = 363846332834.618 WHERE country = 'NGA';
-UPDATE myeconomy SET gdp = 17829218219.3591 WHERE country = 'NIC';
-UPDATE myeconomy SET gdp = 1154361305398.06 WHERE country = 'NLD';
-UPDATE myeconomy SET gdp = 485310823603.662 WHERE country = 'NOR';
-UPDATE myeconomy SET gdp = 40908073366.8455 WHERE country = 'NPL';
-UPDATE myeconomy SET gdp = 154170289.321861 WHERE country = 'NRU';
-UPDATE myeconomy SET gdp = 252175506110.168 WHERE country = 'NZL';
-UPDATE myeconomy SET gdp = 64746562052056.7 WHERE country = 'OED';
-UPDATE myeconomy SET gdp = 108810923276.983 WHERE country = 'OMN';
-UPDATE myeconomy SET gdp = 241086470734.391 WHERE country = 'OSS';
-UPDATE myeconomy SET gdp = 337912301397.727 WHERE country = 'PAK';
-UPDATE myeconomy SET gdp = 83318176900 WHERE country = 'PAN';
-UPDATE myeconomy SET gdp = 267603248655.253 WHERE country = 'PER';
-UPDATE myeconomy SET gdp = 437146372729.942 WHERE country = 'PHL';
-UPDATE myeconomy SET gdp = 281849062.5 WHERE country = 'PLW';
-UPDATE myeconomy SET gdp = 30729242919.4411 WHERE country = 'PNG';
-UPDATE myeconomy SET gdp = 809200697797.088 WHERE country = 'POL';
-UPDATE myeconomy SET gdp = 1566942319113.72 WHERE country = 'PRE';
-UPDATE myeconomy SET gdp = 117902300000 WHERE country = 'PRI';
-UPDATE myeconomy SET gdp = 289114289663.542 WHERE country = 'PRT';
-UPDATE myeconomy SET gdp = 42956263543.9482 WHERE country = 'PRY';
-UPDATE myeconomy SET gdp = 17420800000 WHERE country = 'GAZA';
-UPDATE myeconomy SET gdp = 11150695760.1484 WHERE country = 'PSS';
-UPDATE myeconomy SET gdp = 60485245420468.7 WHERE country = 'PST';
-UPDATE myeconomy SET gdp = 213002809330.267 WHERE country = 'QAT';
-UPDATE myeconomy SET gdp = 350775856415.189 WHERE country = 'ROU';
-UPDATE myeconomy SET gdp = 2021421476035.42 WHERE country = 'RUS';
-UPDATE myeconomy SET gdp = 14097768472.1883 WHERE country = 'RWA';
-UPDATE myeconomy SET gdp = 4494987381110.1 WHERE country = 'SAS';
-UPDATE myeconomy SET gdp = 1067582933333.33 WHERE country = 'SAU';
-UPDATE myeconomy SET gdp = 109265503110.904 WHERE country = 'SDN';
-UPDATE myeconomy SET gdp = 30848333083.7055 WHERE country = 'SEN';
-UPDATE myeconomy SET gdp = 501427500080.059 WHERE country = 'SGP';
-UPDATE myeconomy SET gdp = 1633319401.19414 WHERE country = 'SLB';
-UPDATE myeconomy SET gdp = 6411869546.28929 WHERE country = 'SLE';
-UPDATE myeconomy SET gdp = 34015620000 WHERE country = 'ES';
-UPDATE myeconomy SET gdp = 10968517090.0004 WHERE country = 'SOM';
-UPDATE myeconomy SET gdp = 81342660752.3732 WHERE country = 'SRB';
-UPDATE myeconomy SET gdp = 2042436971778.64 WHERE country = 'SSA';
-UPDATE myeconomy SET gdp = 2044578421949.78 WHERE country = 'SSF';
-UPDATE myeconomy SET gdp = 305546743662.392 WHERE country = 'SST';
-UPDATE myeconomy SET gdp = 678976264.835436 WHERE country = 'STP';
-UPDATE myeconomy SET gdp = 3455146280.83975 WHERE country = 'SUR';
-UPDATE myeconomy SET gdp = 132908336234.295 WHERE country = 'SVK';
-UPDATE myeconomy SET gdp = 69148468417.3208 WHERE country = 'SVN';
-UPDATE myeconomy SET gdp = 584960475767.32 WHERE country = 'SWE';
-UPDATE myeconomy SET gdp = 4442875788.08505 WHERE country = 'SWZ';
-UPDATE myeconomy SET gdp = 1627776949.27374 WHERE country = 'SXM';
-UPDATE myeconomy SET gdp = 2141450171.13932 WHERE country = 'SYC';
-UPDATE myeconomy SET gdp = 1402054390.94734 WHERE country = 'TCA';
-UPDATE myeconomy SET gdp = 13149325362.3347 WHERE country = 'TCH';
-UPDATE myeconomy SET gdp = 21136712800814.7 WHERE country = 'TEA';
-UPDATE myeconomy SET gdp = 5497903850286.88 WHERE country = 'TEC';
-UPDATE myeconomy SET gdp = 9171261837.57103 WHERE country = 'TGO';
-UPDATE myeconomy SET gdp = 514968699239.005 WHERE country = 'THA';
-UPDATE myeconomy SET gdp = 12060602008.8478 WHERE country = 'TJK';
-UPDATE myeconomy SET gdp = 60628857142.8571 WHERE country = 'TKM';
-UPDATE myeconomy SET gdp = 6779682191342.68 WHERE country = 'TLA';
-UPDATE myeconomy SET gdp = 2079916900 WHERE country = 'TLS';
-UPDATE myeconomy SET gdp = 1653767249808.37 WHERE country = 'TMN';
-UPDATE myeconomy SET gdp = 4494987381110.1 WHERE country = 'TSA';
-UPDATE myeconomy SET gdp = 2044578421949.78 WHERE country = 'TSS';
-UPDATE myeconomy SET gdp = 27372285697.9477 WHERE country = 'TTO';
-UPDATE myeconomy SET gdp = 48529595416.6533 WHERE country = 'TUN';
-UPDATE myeconomy SET gdp = 1118252964260.77 WHERE country = 'TUR';
-UPDATE myeconomy SET gdp = 62280311.5852172 WHERE country = 'TUV';
-UPDATE myeconomy SET gdp = 79062403820.892 WHERE country = 'TZA';
-UPDATE myeconomy SET gdp = 48768955863.3175 WHERE country = 'UGA';
-UPDATE myeconomy SET gdp = 178757021965.008 WHERE country = 'UKR';
-UPDATE myeconomy SET gdp = 29440021018933.5 WHERE country = 'UMC';
-UPDATE myeconomy SET gdp = 77240830877.4597 WHERE country = 'URY';
-UPDATE myeconomy SET gdp = 27720709000000 WHERE country = 'USA';
-UPDATE myeconomy SET gdp = 101591769702.343 WHERE country = 'UZB';
-UPDATE myeconomy SET gdp = 1065962962.96296 WHERE country = 'VCT';
-UPDATE myeconomy SET gdp = 429716969043.572 WHERE country = 'VNM';
-UPDATE myeconomy SET gdp = 1126313359.21923 WHERE country = 'VUT';
-UPDATE myeconomy SET gdp = 106171667873321 WHERE country = 'WLD';
-UPDATE myeconomy SET gdp = 938189443.830393 WHERE country = 'WSM';
-UPDATE myeconomy SET gdp = 10468219225.4869 WHERE country = 'XKX';
-UPDATE myeconomy SET gdp = 380699271814.508 WHERE country = 'ZAF';
-UPDATE myeconomy SET gdp = 27577956471.244 WHERE country = 'ZMB';
+BEGIN;  -- Begin transaction
 
+-- ============================================================================
+-- SECTION 1: PROVINCE EXTENSION
+-- ============================================================================
 
--- Update agriculture for various countries in the myeconomy table
-UPDATE myeconomy SET agriculture = 14.2318015672532 WHERE country = 'AFE';
-UPDATE myeconomy SET agriculture = 34.5208917527827 WHERE country = 'AFG';
-UPDATE myeconomy SET agriculture = 21.2095995991567 WHERE country = 'AFW';
-UPDATE myeconomy SET agriculture = 14.9021524183832 WHERE country = 'AGO';
-UPDATE myeconomy SET agriculture = 16.2225675343538 WHERE country = 'AL';
-UPDATE myeconomy SET agriculture = 0.47849213558896 WHERE country = 'AND';
-UPDATE myeconomy SET agriculture = 4.92536556793094 WHERE country = 'ARB';
-UPDATE myeconomy SET agriculture = 0.701206777662814 WHERE country = 'ARE';
-UPDATE myeconomy SET agriculture = 5.92985376183283 WHERE country = 'RA';
-UPDATE myeconomy SET agriculture = 8.48155989918731 WHERE country = 'ARM';
-UPDATE myeconomy SET agriculture = 1.9144412888276 WHERE country = 'AUS';
-UPDATE myeconomy SET agriculture = 2.57350206211225 WHERE country = 'A';
-UPDATE myeconomy SET agriculture = 1.29697030335468 WHERE country = 'AZ';
-UPDATE myeconomy SET agriculture = 5.5408904479881 WHERE country = 'BI';
-UPDATE myeconomy SET agriculture = 25.219392135359 WHERE country = 'B';
-UPDATE myeconomy SET agriculture = 0.769082939613356 WHERE country = 'BEN';
-UPDATE myeconomy SET agriculture = 25.4020258817765 WHERE country = 'BF';
-UPDATE myeconomy SET agriculture = 16.3344550497717 WHERE country = 'BD';
-UPDATE myeconomy SET agriculture = 11.0036900209598 WHERE country = 'BG';
-UPDATE myeconomy SET agriculture = 2.51757865068013 WHERE country = 'BRN';
-UPDATE myeconomy SET agriculture = 0.252106223987838 WHERE country = 'BS';
-UPDATE myeconomy SET agriculture = 0.448443003103532 WHERE country = 'BIH';
-UPDATE myeconomy SET agriculture = 4.68049236089149 WHERE country = 'BY';
-UPDATE myeconomy SET agriculture = 7.25038327110143 WHERE country = 'BZ';
-UPDATE myeconomy SET agriculture = 8.1011461271337 WHERE country = 'BERM';
-UPDATE myeconomy SET agriculture = 13.4661293122981 WHERE country = 'BR';
-UPDATE myeconomy SET agriculture = 6.24138467625666 WHERE country = 'BDS';
-UPDATE myeconomy SET agriculture = 1.85400902389638 WHERE country = 'BRU';
-UPDATE myeconomy SET agriculture = 1.19494547242928 WHERE country = 'RB';
-UPDATE myeconomy SET agriculture = 1.58126132370886 WHERE country = 'CDN';
-UPDATE myeconomy SET agriculture = 28.6110555239693 WHERE country = 'CEB';
-UPDATE myeconomy SET agriculture = 2.88595599750125 WHERE country = 'CHI';
-UPDATE myeconomy SET agriculture = 0.62920241956629 WHERE country = 'RCH';
-UPDATE myeconomy SET agriculture = 0.598873830764423 WHERE country = 'CN';
-UPDATE myeconomy SET agriculture = 3.5202728754447 WHERE country = 'CI';
-UPDATE myeconomy SET agriculture = 7.12013561003674 WHERE country = 'CMR';
-UPDATE myeconomy SET agriculture = 14.3558740989075 WHERE country = 'CGO';
-UPDATE myeconomy SET agriculture = 17.2949410198251 WHERE country = 'RCB';
-UPDATE myeconomy SET agriculture = 17.3892986060686 WHERE country = 'CO';
-UPDATE myeconomy SET agriculture = 8.95211587630601 WHERE country = 'COM';
-UPDATE myeconomy SET agriculture = 8.72385780733094 WHERE country = 'CPV';
-UPDATE myeconomy SET agriculture = 37.1852737709758 WHERE country = 'CR';
-UPDATE myeconomy SET agriculture = 4.64406828692035 WHERE country = 'CSS';
-UPDATE myeconomy SET agriculture = 3.80047657288839 WHERE country = 'CUR';
-UPDATE myeconomy SET agriculture = 0.268253397737773 WHERE country = 'CZ';
-UPDATE myeconomy SET agriculture = 1.17908465124222 WHERE country = 'DJI';
-UPDATE myeconomy SET agriculture = 1.73116772638178 WHERE country = 'WD';
-UPDATE myeconomy SET agriculture = 0.841992091839782 WHERE country = 'DK';
-UPDATE myeconomy SET agriculture = 1.76004578990614 WHERE country = 'DOM';
-UPDATE myeconomy SET agriculture = 14.7962939890587 WHERE country = 'DZA';
-UPDATE myeconomy SET agriculture = 0.756712776534002 WHERE country = 'EAP';
-UPDATE myeconomy SET agriculture = 6.3668923231164 WHERE country = 'EAR';
-UPDATE myeconomy SET agriculture = 13.086784145579 WHERE country = 'EAS';
-UPDATE myeconomy SET agriculture = 7.7766118297868 WHERE country = 'ECA';
-UPDATE myeconomy SET agriculture = 10.6450015704589 WHERE country = 'ECS';
-UPDATE myeconomy SET agriculture = 5.80524148876577 WHERE country = 'EC';
-UPDATE myeconomy SET agriculture = 6.99571524983013 WHERE country = 'ET';
-UPDATE myeconomy SET agriculture = 2.03723709530839 WHERE country = 'EMU';
-UPDATE myeconomy SET agriculture = 7.67737671642516 WHERE country = 'ESP';
-UPDATE myeconomy SET agriculture = 11.5659207037428 WHERE country = 'EST';
-UPDATE myeconomy SET agriculture = 1.5445243255868 WHERE country = 'ETH';
-UPDATE myeconomy SET agriculture = 2.4997263609206 WHERE country = 'FCS';
-UPDATE myeconomy SET agriculture = 1.92665836505749 WHERE country = 'SF';
-UPDATE myeconomy SET agriculture = 35.7897991219755 WHERE country = 'FJI';
-UPDATE myeconomy SET agriculture = 1.6510603553709 WHERE country = 'F';
-UPDATE myeconomy SET agriculture = 17.2047634975493 WHERE country = 'FO';
-UPDATE myeconomy SET agriculture = 2.31340553197717 WHERE country = 'FSM';
-UPDATE myeconomy SET agriculture = 11.7329101909603 WHERE country = 'GAB';
-UPDATE myeconomy SET agriculture = 1.74050275246234 WHERE country = 'GBR';
-UPDATE myeconomy SET agriculture = 18.2015059267542 WHERE country = 'GE';
-UPDATE myeconomy SET agriculture = 22.4685434782609 WHERE country = 'GH';
-UPDATE myeconomy SET agriculture = 6.52596912546538 WHERE country = 'RG';
-UPDATE myeconomy SET agriculture = 0.579699701731121 WHERE country = 'WAG';
-UPDATE myeconomy SET agriculture = 6.01579511070392 WHERE country = 'GUB';
-UPDATE myeconomy SET agriculture = 21.1026509845537 WHERE country = 'GQ';
-UPDATE myeconomy SET agriculture = 29.0912987072123 WHERE country = 'WG';
-UPDATE myeconomy SET agriculture = 23.2246283293297 WHERE country = 'GCA';
-UPDATE myeconomy SET agriculture = 30.739271738623 WHERE country = 'GUY';
-UPDATE myeconomy SET agriculture = 3.09341045540385 WHERE country = 'HIC';
-UPDATE myeconomy SET agriculture = 3.34343514538129 WHERE country = 'HK';
-UPDATE myeconomy SET agriculture = 3.27747118289369 WHERE country = 'HN';
-UPDATE myeconomy SET agriculture = 9.77009779221321 WHERE country = 'HR';
-UPDATE myeconomy SET agriculture = 0.037899101858364 WHERE country = 'IBT';
-UPDATE myeconomy SET agriculture = 11.9797586981212 WHERE country = 'IDA';
-UPDATE myeconomy SET agriculture = 20.8884169714055 WHERE country = 'IDB';
-UPDATE myeconomy SET agriculture = 3.35726861927119 WHERE country = 'IDN';
-UPDATE myeconomy SET agriculture = 18.1539755176052 WHERE country = 'IDX';
-UPDATE myeconomy SET agriculture = 4.69014413462121 WHERE country = 'IND';
-UPDATE myeconomy SET agriculture = 7.82298725250191 WHERE country = 'IRL';
-UPDATE myeconomy SET agriculture = 8.61216468780402 WHERE country = 'IRN';
-UPDATE myeconomy SET agriculture = 19.2843458017924 WHERE country = 'IRQ';
-UPDATE myeconomy SET agriculture = 21.0276828750148 WHERE country = 'IS';
-UPDATE myeconomy SET agriculture = 12.5293069217922 WHERE country = 'ISR';
-UPDATE myeconomy SET agriculture = 18.3329410484665 WHERE country = 'ITA';
-UPDATE myeconomy SET agriculture = 15.9983621319994 WHERE country = 'JOR';
-UPDATE myeconomy SET agriculture = 0.875702556096056 WHERE country = 'KAZ';
-UPDATE myeconomy SET agriculture = 12.8357641821529 WHERE country = 'KEN';
-UPDATE myeconomy SET agriculture = 2.80439543155543 WHERE country = 'KGZ';
-UPDATE myeconomy SET agriculture = 3.81786064533298 WHERE country = 'KHM';
-UPDATE myeconomy SET agriculture = 1.85675159800177 WHERE country = 'KNA';
-UPDATE myeconomy SET agriculture = 9.02386916925967 WHERE country = 'KOR';
-UPDATE myeconomy SET agriculture = 4.80965028581124 WHERE country = 'KWT';
-UPDATE myeconomy SET agriculture = 3.94185094025748 WHERE country = 'LAO';
-UPDATE myeconomy SET agriculture = 21.8099563923185 WHERE country = 'LBR';
-UPDATE myeconomy SET agriculture = 9.65470061489197 WHERE country = 'LBY';
-UPDATE myeconomy SET agriculture = 17.0784472455351 WHERE country = 'LCA';
-UPDATE myeconomy SET agriculture = 1.41340802078875 WHERE country = 'LDC';
-UPDATE myeconomy SET agriculture = 1.59560572785029 WHERE country = 'LIC';
-UPDATE myeconomy SET agriculture = 0.473544674668771 WHERE country = 'LKA';
-UPDATE myeconomy SET agriculture = 5.83767040808985 WHERE country = 'LMC';
-UPDATE myeconomy SET agriculture = 16.1390568351887 WHERE country = 'LMY';
-UPDATE myeconomy SET agriculture = 35.7783018867924 WHERE country = 'LTE';
-UPDATE myeconomy SET agriculture = 1.77478465195997 WHERE country = 'LTU';
-UPDATE myeconomy SET agriculture = 1.12628402475082 WHERE country = 'LUX';
-UPDATE myeconomy SET agriculture = 6.5091346353913 WHERE country = 'LVA';
-UPDATE myeconomy SET agriculture = 18.8293804090568 WHERE country = 'MAC';
-UPDATE myeconomy SET agriculture = 24.8230475144424 WHERE country = 'MAR';
-UPDATE myeconomy SET agriculture = 8.28102514095053 WHERE country = 'MDA';
-UPDATE myeconomy SET agriculture = 15.407490364712 WHERE country = 'MDG';
-UPDATE myeconomy SET agriculture = 9.0371990252128 WHERE country = 'MDV';
-UPDATE myeconomy SET agriculture = 6.63922933135679 WHERE country = 'MEA';
-UPDATE myeconomy SET agriculture = 6.25555213105449 WHERE country = 'MEX';
-UPDATE myeconomy SET agriculture = 2.71539099968174 WHERE country = 'MHL';
-UPDATE myeconomy SET agriculture = 0.229008782818307 WHERE country = 'MIC';
-UPDATE myeconomy SET agriculture = 3.84563990980558 WHERE country = 'MKD';
-UPDATE myeconomy SET agriculture = 11.0646198674555 WHERE country = 'MMR';
-UPDATE myeconomy SET agriculture = 7.61944302883983 WHERE country = 'MNE';
-UPDATE myeconomy SET agriculture = 22.6374198967378 WHERE country = 'MNG';
-UPDATE myeconomy SET agriculture = 5.10520116272519 WHERE country = 'MOZ';
-UPDATE myeconomy SET agriculture = 5.13299427644475 WHERE country = 'MRT';
-UPDATE myeconomy SET agriculture = 3.82227606928439 WHERE country = 'MUS';
-UPDATE myeconomy SET agriculture = 19.4718087157732 WHERE country = 'MWI';
-UPDATE myeconomy SET agriculture = 8.75659550639912 WHERE country = 'MYS';
-UPDATE myeconomy SET agriculture = 6.62714446125294 WHERE country = 'NAC';
-UPDATE myeconomy SET agriculture = 35.1089064885348 WHERE country = 'NAM';
-UPDATE myeconomy SET agriculture = 0.6861846028478 WHERE country = 'NER';
-UPDATE myeconomy SET agriculture = 22.7222309725462 WHERE country = 'NGA';
-UPDATE myeconomy SET agriculture = 10.6809594083518 WHERE country = 'NIC';
-UPDATE myeconomy SET agriculture = 5.47218650083326 WHERE country = 'NLD';
-UPDATE myeconomy SET agriculture = 9.92060281298024 WHERE country = 'NOR';
-UPDATE myeconomy SET agriculture = 25.9114511595886 WHERE country = 'NRU';
-UPDATE myeconomy SET agriculture = 18.7429246253911 WHERE country = 'NZL';
-UPDATE myeconomy SET agriculture = 3.8573456405553 WHERE country = 'OED';
-UPDATE myeconomy SET agriculture = 30.3792338833699 WHERE country = 'OMN';
-UPDATE myeconomy SET agriculture = 7.78590383851514 WHERE country = 'OSS';
-UPDATE myeconomy SET agriculture = 7.71825514163059 WHERE country = 'PAN';
-UPDATE myeconomy SET agriculture = 47.813173887473 WHERE country = 'PHL';
-UPDATE myeconomy SET agriculture = 22.7249380389601 WHERE country = 'PLW';
-UPDATE myeconomy SET agriculture = 15.3375772258118 WHERE country = 'PNG';
-UPDATE myeconomy SET agriculture = 1.72255687762915 WHERE country = 'POL';
-UPDATE myeconomy SET agriculture = 2.0956988198576 WHERE country = 'PRE';
-UPDATE myeconomy SET agriculture = 21.1895508386773 WHERE country = 'PRI';
-UPDATE myeconomy SET agriculture = 2.30987289006592 WHERE country = 'PSS';
-UPDATE myeconomy SET agriculture = 2.53712884905021 WHERE country = 'PST';
-UPDATE myeconomy SET agriculture = 23.3290852852839 WHERE country = 'QAT';
-UPDATE myeconomy SET agriculture = 2.4502821304531 WHERE country = 'ROU';
-UPDATE myeconomy SET agriculture = 7.18623360549378 WHERE country = 'RUS';
-UPDATE myeconomy SET agriculture = 9.39675017951301 WHERE country = 'RWA';
-UPDATE myeconomy SET agriculture = 2.9898215996975 WHERE country = 'SAS';
-UPDATE myeconomy SET agriculture = 16.959592502238 WHERE country = 'SAU';
-UPDATE myeconomy SET agriculture = 2.74749309885613 WHERE country = 'SDN';
-UPDATE myeconomy SET agriculture = 16.9672451793675 WHERE country = 'SEN';
-UPDATE myeconomy SET agriculture = 0.693625145565439 WHERE country = 'SGP';
-UPDATE myeconomy SET agriculture = 2.11841993793413 WHERE country = 'SLE';
-UPDATE myeconomy SET agriculture = 11.348849122098 WHERE country = 'ES';
-UPDATE myeconomy SET agriculture = 0.292779132520435 WHERE country = 'SST';
-UPDATE myeconomy SET agriculture = 3.87724563959829 WHERE country = 'STP';
-UPDATE myeconomy SET agriculture = 3.34855889106627 WHERE country = 'SUR';
-UPDATE myeconomy SET agriculture = 27.0533057581152 WHERE country = 'SVK';
-UPDATE myeconomy SET agriculture = 16.0201686968631 WHERE country = 'SVN';
-UPDATE myeconomy SET agriculture = 2.71494286407976 WHERE country = 'SWE';
-UPDATE myeconomy SET agriculture = 5.47014439253618 WHERE country = 'SWZ';
-UPDATE myeconomy SET agriculture = 17.4126152448881 WHERE country = 'SXM';
-UPDATE myeconomy SET agriculture = 0.0290657823856606 WHERE country = 'SYC';
-UPDATE myeconomy SET agriculture = 29.0706684841078 WHERE country = 'TCH';
-UPDATE myeconomy SET agriculture = 4.60544302882029 WHERE country = 'TEA';
-UPDATE myeconomy SET agriculture = 3.7865962699793 WHERE country = 'THA';
-UPDATE myeconomy SET agriculture = 16.9605001874372 WHERE country = 'TJK';
-UPDATE myeconomy SET agriculture = 16.9456928090661 WHERE country = 'TLA';
-UPDATE myeconomy SET agriculture = 3.41725808278176 WHERE country = 'TLS';
-UPDATE myeconomy SET agriculture = 13.7064079951907 WHERE country = 'TMN';
-UPDATE myeconomy SET agriculture = 7.47450024143751 WHERE country = 'TSA';
-UPDATE myeconomy SET agriculture = 2.00257670735336 WHERE country = 'TSS';
-UPDATE myeconomy SET agriculture = 1.51932161939818 WHERE country = 'TTO';
-UPDATE myeconomy SET agriculture = 0.993696150422338 WHERE country = 'TUN';
-UPDATE myeconomy SET agriculture = 7.05235121915418 WHERE country = 'TUR';
-UPDATE myeconomy SET agriculture = 2.81663903546804 WHERE country = 'TZA';
-UPDATE myeconomy SET agriculture = 25.1252311455263 WHERE country = 'UMC';
-UPDATE myeconomy SET agriculture = 7.76351173173558 WHERE country = 'URY';
-UPDATE myeconomy SET agriculture = 4.68712446620028 WHERE country = 'USA';
-UPDATE myeconomy SET agriculture = 18.1308320495559 WHERE country = 'UZB';
-UPDATE myeconomy SET agriculture = 8.57620656757898 WHERE country = 'VCT';
-UPDATE myeconomy SET agriculture = 11.291652725482 WHERE country = 'VUT';
-UPDATE myeconomy SET agriculture = 6.74197740875848 WHERE country = 'WLD';
-UPDATE myeconomy SET agriculture = 16.8601399411678 WHERE country = 'WSM';
-UPDATE myeconomy SET agriculture = 10.7235843525292 WHERE country = 'XKX';
-UPDATE myeconomy SET agriculture = 16.0201686968631 WHERE country = 'ZMB';
-UPDATE myeconomy SET agriculture = 16.9456928090661 WHERE country = 'ZWE';
-UPDATE myeconomy SET agriculture = 9.47322064564395 WHERE country = 'TUN';
-UPDATE myeconomy SET agriculture = 6.15948050204121 WHERE country = 'TUR';
-UPDATE myeconomy SET agriculture = 23.6871473778719 WHERE country = 'TZA';
-UPDATE myeconomy SET agriculture = 24.0895746897278 WHERE country = 'UGA';
-UPDATE myeconomy SET agriculture = 7.40536799317816 WHERE country = 'UKR';
-UPDATE myeconomy SET agriculture = 7.07555051490648 WHERE country = 'UMC';
-UPDATE myeconomy SET agriculture = 5.56779937151037 WHERE country = 'URY';
-UPDATE myeconomy SET agriculture = 20.5695563710874 WHERE country = 'UZB';
-UPDATE myeconomy SET agriculture = 4.15378200896425 WHERE country = 'VCT';
-UPDATE myeconomy SET agriculture = 11.9604858170749 WHERE country = 'VNM';
-UPDATE myeconomy SET agriculture = 4.10306441419422 WHERE country = 'WLD';
-UPDATE myeconomy SET agriculture = 10.9738580777854 WHERE country = 'WSM';
-UPDATE myeconomy SET agriculture = 7.22045622204888 WHERE country = 'XKX';
-UPDATE myeconomy SET agriculture = 2.61681042406659 WHERE country = 'ZAF';
-UPDATE myeconomy SET agriculture = 2.23012034259343 WHERE country = 'ZMB';
-UPDATE myeconomy SET agriculture = 4.10825365441784 WHERE country = 'ZWE';
+-- 1.0 Drop old extended table if it exists
+DROP TABLE IF EXISTS student32.province_economy_extended CASCADE;
 
--- Update industry for various countries in the myeconomy table
-UPDATE myeconomy SET industry = 25.1278965460593 WHERE country = 'AFE';
-UPDATE myeconomy SET industry = 13.5231032701819 WHERE country = 'AFG';
-UPDATE myeconomy SET industry = 30.152449780716 WHERE country = 'AFW';
-UPDATE myeconomy SET industry = 45.2629187172157 WHERE country = 'AGO';
-UPDATE myeconomy SET industry = 23.0184724953671 WHERE country = 'AL';
-UPDATE myeconomy SET industry = 12.4282261796617 WHERE country = 'AND';
-UPDATE myeconomy SET industry = 43.5340291837494 WHERE country = 'ARB';
-UPDATE myeconomy SET industry = 47.7236418303746 WHERE country = 'ARE';
-UPDATE myeconomy SET industry = 25.0563816101503 WHERE country = 'RA';
-UPDATE myeconomy SET industry = 23.3745392421065 WHERE country = 'ARM';
-UPDATE myeconomy SET industry = 19.4351587534362 WHERE country = 'AUS';
-UPDATE myeconomy SET industry = 27.6508823908584 WHERE country = 'A';
-UPDATE myeconomy SET industry = 25.2446158376037 WHERE country = 'AZ';
-UPDATE myeconomy SET industry = 46.6317359792855 WHERE country = 'BI';
-UPDATE myeconomy SET industry = 9.58704196613673 WHERE country = 'B';
-UPDATE myeconomy SET industry = 18.5320111362915 WHERE country = 'BEN';
-UPDATE myeconomy SET industry = 17.301919273728 WHERE country = 'BF';
-UPDATE myeconomy SET industry = 29.2507438804066 WHERE country = 'BD';
-UPDATE myeconomy SET industry = 34.5942721606063 WHERE country = 'BG';
-UPDATE myeconomy SET industry = 22.6590548996786 WHERE country = 'BRN';
-UPDATE myeconomy SET industry = 44.0340920568647 WHERE country = 'BS';
-UPDATE myeconomy SET industry = 8.79101719147749 WHERE country = 'BIH';
-UPDATE myeconomy SET industry = 23.7549720693083 WHERE country = 'BY';
-UPDATE myeconomy SET industry = 32.5397512173745 WHERE country = 'BZ';
-UPDATE myeconomy SET industry = 14.2670818592367 WHERE country = 'BERM';
-UPDATE myeconomy SET industry = 24.2281365743265 WHERE country = 'BR';
-UPDATE myeconomy SET industry = 22.2631820393204 WHERE country = 'BDS';
-UPDATE myeconomy SET industry = 13.2468225341842 WHERE country = 'BRU';
-UPDATE myeconomy SET industry = 61.8007697610423 WHERE country = 'RB';
-UPDATE myeconomy SET industry = 34.3235124372148 WHERE country = 'CDN';
-UPDATE myeconomy SET industry = 20.7068173193684 WHERE country = 'CEB';
-UPDATE myeconomy SET industry = 28.0366123015779 WHERE country = 'CHI';
-UPDATE myeconomy SET industry = 24.927719758741 WHERE country = 'RCH';
-UPDATE myeconomy SET industry = 8.22051733135763 WHERE country = 'CN';
-UPDATE myeconomy SET industry = 29.6651664091037 WHERE country = 'CI';
-UPDATE myeconomy SET industry = 38.2829907905443 WHERE country = 'CMR';
-UPDATE myeconomy SET industry = 23.8872081552878 WHERE country = 'CGO';
-UPDATE myeconomy SET industry = 25.5334310202935 WHERE country = 'RCB';
-UPDATE myeconomy SET industry = 46.5079749144518 WHERE country = 'CO';
-UPDATE myeconomy SET industry = 45.2236339577947 WHERE country = 'COM';
-UPDATE myeconomy SET industry = 24.5543601164546 WHERE country = 'CPV';
-UPDATE myeconomy SET industry = 8.97434105710441 WHERE country = 'CR';
-UPDATE myeconomy SET industry = 10.5663236902043 WHERE country = 'CSS';
-UPDATE myeconomy SET industry = 20.459253835237 WHERE country = 'CUR';
-UPDATE myeconomy SET industry = 28.6078915059355 WHERE country = 'CAYM';
-UPDATE myeconomy SET industry = 11.6877248208857 WHERE country = 'CZ';
-UPDATE myeconomy SET industry = 10.4941708818085 WHERE country = 'DJI';
-UPDATE myeconomy SET industry = 30.4223358832913 WHERE country = 'WD';
-UPDATE myeconomy SET industry = 26.8431150028073 WHERE country = 'DK';
-UPDATE myeconomy SET industry = 15.3024345262154 WHERE country = 'DOM';
-UPDATE myeconomy SET industry = 12.1968761680391 WHERE country = 'DZA';
-UPDATE myeconomy SET industry = 23.4885652894018 WHERE country = 'EAP';
-UPDATE myeconomy SET industry = 31.1386885672813 WHERE country = 'EAR';
-UPDATE myeconomy SET industry = 37.7570495314503 WHERE country = 'EAS';
-UPDATE myeconomy SET industry = 38.0193076239339 WHERE country = 'ECA';
-UPDATE myeconomy SET industry = 32.5304573886065 WHERE country = 'ECS';
-UPDATE myeconomy SET industry = 34.6280207063991 WHERE country = 'EC';
-UPDATE myeconomy SET industry = 28.5605262799183 WHERE country = 'ET';
-UPDATE myeconomy SET industry = 23.8265488921622 WHERE country = 'EMU';
-UPDATE myeconomy SET industry = 26.8571330147768 WHERE country = 'ESP';
-UPDATE myeconomy SET industry = 32.1190419225224 WHERE country = 'EST';
-UPDATE myeconomy SET industry = 22.6566406129607 WHERE country = 'ETH';
-UPDATE myeconomy SET industry = 20.1164100688503 WHERE country = 'FCS';
-UPDATE myeconomy SET industry = 21.7421087380918 WHERE country = 'SF';
-UPDATE myeconomy SET industry = 24.4766764370164 WHERE country = 'FJI';
-UPDATE myeconomy SET industry = 23.2541114924246 WHERE country = 'F';
-UPDATE myeconomy SET industry = 23.8647007171081 WHERE country = 'FSM';
-UPDATE myeconomy SET industry = 14.1921339062096 WHERE country = 'GAB';
-UPDATE myeconomy SET industry = 18.4701925763483 WHERE country = 'GBR';
-UPDATE myeconomy SET industry = 19.6699145254696 WHERE country = 'GE';
-UPDATE myeconomy SET industry = 4.85473913043478 WHERE country = 'GH';
-UPDATE myeconomy SET industry = 53.5260426150101 WHERE country = 'RG';
-UPDATE myeconomy SET industry = 17.500181064246 WHERE country = 'WAG';
-UPDATE myeconomy SET industry = 18.8799548739128 WHERE country = 'GUB';
-UPDATE myeconomy SET industry = 29.4595520645092 WHERE country = 'GQ';
-UPDATE myeconomy SET industry = 26.3423136091559 WHERE country = 'WG';
-UPDATE myeconomy SET industry = 16.6589321268444 WHERE country = 'GCA';
-UPDATE myeconomy SET industry = 18.779829790111 WHERE country = 'GUY';
-UPDATE myeconomy SET industry = 46.5038081676499 WHERE country = 'HIC';
-UPDATE myeconomy SET industry = 15.2818535136882 WHERE country = 'HK';
-UPDATE myeconomy SET industry = 14.9533919520249 WHERE country = 'HN';
-UPDATE myeconomy SET industry = 22.2850560397911 WHERE country = 'HR';
-UPDATE myeconomy SET industry = 6.32398500000503 WHERE country = 'IBT';
-UPDATE myeconomy SET industry = 26.0324240833019 WHERE country = 'IDA';
-UPDATE myeconomy SET industry = 25.2855162889658 WHERE country = 'IDB';
-UPDATE myeconomy SET industry = 21.010322389472 WHERE country = 'IDN';
-UPDATE myeconomy SET industry = 31.037006006726 WHERE country = 'IDX';
-UPDATE myeconomy SET industry = 24.320183560803 WHERE country = 'IND';
-UPDATE myeconomy SET industry = 34.2390701110962 WHERE country = 'IRL';
-UPDATE myeconomy SET industry = 33.7618612590248 WHERE country = 'IRN';
-UPDATE myeconomy SET industry = 27.2565449314439 WHERE country = 'IRQ';
-UPDATE myeconomy SET industry = 26.5081009291648 WHERE country = 'IS';
-UPDATE myeconomy SET industry = 40.2156294645022 WHERE country = 'ISR';
-UPDATE myeconomy SET industry = 27.7479090489007 WHERE country = 'ITA';
-UPDATE myeconomy SET industry = 25.0306333187945 WHERE country = 'JOR';
-UPDATE myeconomy SET industry = 33.1881838653592 WHERE country = 'KAZ';
-UPDATE myeconomy SET industry = 36.2438644208097 WHERE country = 'KEN';
-UPDATE myeconomy SET industry = 55.5843655997855 WHERE country = 'KGZ';
-UPDATE myeconomy SET industry = 21.0567362164463 WHERE country = 'KHM';
-UPDATE myeconomy SET industry = 22.9395572766071 WHERE country = 'KNA';
-UPDATE myeconomy SET industry = 18.648884323148 WHERE country = 'KOR';
-UPDATE myeconomy SET industry = 24.7652637905021 WHERE country = 'KWT';
-UPDATE myeconomy SET industry = 32.3295253976977 WHERE country = 'LAO';
-UPDATE myeconomy SET industry = 16.8580693934385 WHERE country = 'LBR';
-UPDATE myeconomy SET industry = 22.6354196130715 WHERE country = 'LBY';
-UPDATE myeconomy SET industry = 40.5173741615592 WHERE country = 'LCA';
-UPDATE myeconomy SET industry = 20.1677323721036 WHERE country = 'LDC';
-UPDATE myeconomy SET industry = 31.5941649740866 WHERE country = 'LIC';
-UPDATE myeconomy SET industry = 60.7482821251585 WHERE country = 'LKA';
-UPDATE myeconomy SET industry = 26.4183981507919 WHERE country = 'LMC';
-UPDATE myeconomy SET industry = 30.5335808308347 WHERE country = 'LMY';
-UPDATE myeconomy SET industry = 24.1745283018868 WHERE country = 'LTE';
-UPDATE myeconomy SET industry = 77.3400785094267 WHERE country = 'LTU';
-UPDATE myeconomy SET industry = 9.68543298686256 WHERE country = 'LUX';
-UPDATE myeconomy SET industry = 31.0426782955391 WHERE country = 'LVA';
-UPDATE myeconomy SET industry = 29.0490128004721 WHERE country = 'MAC';
-UPDATE myeconomy SET industry = 23.0997107427105 WHERE country = 'MAR';
-UPDATE myeconomy SET industry = 25.5926109048419 WHERE country = 'MDA';
-UPDATE myeconomy SET industry = 27.4637320019021 WHERE country = 'MDG';
-UPDATE myeconomy SET industry = 33.4561867635763 WHERE country = 'MDV';
-UPDATE myeconomy SET industry = 28.7322622937261 WHERE country = 'MEA';
-UPDATE myeconomy SET industry = 35.6264824377368 WHERE country = 'MEX';
-UPDATE myeconomy SET industry = 24.2370942924201 WHERE country = 'MHL';
-UPDATE myeconomy SET industry = 10.4719147444682 WHERE country = 'MIC';
-UPDATE myeconomy SET industry = 22.3381247616129 WHERE country = 'MKD';
-UPDATE myeconomy SET industry = 5.44475371485509 WHERE country = 'MLI';
-UPDATE myeconomy SET industry = 24.5583104066127 WHERE country = 'MMR';
-UPDATE myeconomy SET industry = 11.5186984130418 WHERE country = 'MNA';
-UPDATE myeconomy SET industry = 17.4403830553959 WHERE country = 'MNE';
-UPDATE myeconomy SET industry = 22.3868349187158 WHERE country = 'MNG';
-UPDATE myeconomy SET industry = 9.69157991037555 WHERE country = 'MOZ';
-UPDATE myeconomy SET industry = 40.638718288297 WHERE country = 'MRT';
-UPDATE myeconomy SET industry = 31.5593119973589 WHERE country = 'MUS';
-UPDATE myeconomy SET industry = 11.0602776706518 WHERE country = 'MWI';
-UPDATE myeconomy SET industry = 33.6385614297648 WHERE country = 'MYS';
-UPDATE myeconomy SET industry = 23.2578241917624 WHERE country = 'NAC';
-UPDATE myeconomy SET industry = 19.9332741424242 WHERE country = 'NAM';
-UPDATE myeconomy SET industry = 11.6811185532072 WHERE country = 'NER';
-UPDATE myeconomy SET industry = 37.5929250362669 WHERE country = 'NGA';
-UPDATE myeconomy SET industry = 36.6422001460944 WHERE country = 'NIC';
-UPDATE myeconomy SET industry = 12.4766805746728 WHERE country = 'NLD';
-UPDATE myeconomy SET industry = 39.5354090088486 WHERE country = 'NOR';
-UPDATE myeconomy SET industry = 21.2873566004224 WHERE country = 'NRU';
-UPDATE myeconomy SET industry = 30.590214885559 WHERE country = 'NZL';
-UPDATE myeconomy SET industry = 18.5576776579874 WHERE country = 'OED';
-UPDATE myeconomy SET industry = 15.3161172731663 WHERE country = 'OMN';
-UPDATE myeconomy SET industry = 37.6697498125523 WHERE country = 'OSS';
-UPDATE myeconomy SET industry = 30.0192114707926 WHERE country = 'PAN';
-UPDATE myeconomy SET industry = 20.193099392276 WHERE country = 'PHL';
-UPDATE myeconomy SET industry = 32.5844117031957 WHERE country = 'PLW';
-UPDATE myeconomy SET industry = 27.3092326209217 WHERE country = 'PNG';
-UPDATE myeconomy SET industry = 18.7469265145434 WHERE country = 'POL';
-UPDATE myeconomy SET industry = 38.9771383985175 WHERE country = 'PRE';
-UPDATE myeconomy SET industry = 12.0536194904685 WHERE country = 'PRI';
-UPDATE myeconomy SET industry = 54.3381822179943 WHERE country = 'PSS';
-UPDATE myeconomy SET industry = 25.1145302847531 WHERE country = 'PST';
-UPDATE myeconomy SET industry = 20.6772958630355 WHERE country = 'QAT';
-UPDATE myeconomy SET industry = 27.8207683634518 WHERE country = 'ROU';
-UPDATE myeconomy SET industry = 33.8585231469467 WHERE country = 'RUS';
-UPDATE myeconomy SET industry = 28.1806863621071 WHERE country = 'RWA';
-UPDATE myeconomy SET industry = 9.87188532742542 WHERE country = 'SAS';
-UPDATE myeconomy SET industry = 36.2877999538849 WHERE country = 'SAU';
-UPDATE myeconomy SET industry = 30.0570024194426 WHERE country = 'SDN';
-UPDATE myeconomy SET industry = 31.9996167557076 WHERE country = 'SEN';
-UPDATE myeconomy SET industry = 49.0615535065898 WHERE country = 'SGP';
-UPDATE myeconomy SET industry = 18.1493667325279 WHERE country = 'SLE';
-UPDATE myeconomy SET industry = 32.3550820353229 WHERE country = 'ES';
-UPDATE myeconomy SET industry = 12.8644933469143 WHERE country = 'SRB';
-UPDATE myeconomy SET industry = 60.3680507882793 WHERE country = 'SST';
-UPDATE myeconomy SET industry = 26.6873286907141 WHERE country = 'STP';
-UPDATE myeconomy SET industry = 30.6475345421976 WHERE country = 'SUR';
-UPDATE myeconomy SET industry = 21.5202939856171 WHERE country = 'SVK';
-UPDATE myeconomy SET industry = 25.4628980009059 WHERE country = 'SVN';
-UPDATE myeconomy SET industry = 46.973674613507 WHERE country = 'SWE';
-UPDATE myeconomy SET industry = 5.11976353604253 WHERE country = 'SWZ';
-UPDATE myeconomy SET industry = 24.3018781774236 WHERE country = 'SXM';
-UPDATE myeconomy SET industry = 22.4003613246571 WHERE country = 'SYC';
-UPDATE myeconomy SET industry = 26.0331665117655 WHERE country = 'TCH';
-UPDATE myeconomy SET industry = 24.9541534154015 WHERE country = 'TEA';
-UPDATE myeconomy SET industry = 23.9746623276374 WHERE country = 'THA';
-UPDATE myeconomy SET industry = 27.1007590009255 WHERE country = 'TJK';
-UPDATE myeconomy SET industry = 27.0849850114287 WHERE country = 'TLA';
-UPDATE myeconomy SET industry = 25.128901108933 WHERE country = 'TLS';
-UPDATE myeconomy SET industry = 2.82100202078488 WHERE country = 'TMN';
-UPDATE myeconomy SET industry = 39.8677544813382 WHERE country = 'TSA';
-UPDATE myeconomy SET industry = 32.8619441534644 WHERE country = 'TSS';
-UPDATE myeconomy SET industry = 29.7010805373138 WHERE country = 'TTO';
-UPDATE myeconomy SET industry = 23.2510140537579 WHERE country = 'TUN';
-UPDATE myeconomy SET industry = 34.6034052750042 WHERE country = 'TUR';
-UPDATE myeconomy SET industry = 12.0215811232788 WHERE country = 'TZA';
-UPDATE myeconomy SET industry = 44.3712975732338 WHERE country = 'UMC';
-UPDATE myeconomy SET industry = 38.0127869441048 WHERE country = 'URY';
-UPDATE myeconomy SET industry = 29.1973753102964 WHERE country = 'USA';
-UPDATE myeconomy SET industry = 20.1698361139024 WHERE country = 'UZB';
-UPDATE myeconomy SET industry = 32.8865389081309 WHERE country = 'VCT';
-UPDATE myeconomy SET industry = 39.272199471256 WHERE country = 'VUT';
-UPDATE myeconomy SET industry = 31.0394615709784 WHERE country = 'WLD';
-UPDATE myeconomy SET industry = 23.8663236978362 WHERE country = 'WSM';
-UPDATE myeconomy SET industry = 36.8521572692208 WHERE country = 'XKX';
-UPDATE myeconomy SET industry = 25.4628980009059 WHERE country = 'ZMB';
-UPDATE myeconomy SET industry = 27.0849850114287 WHERE country = 'ZWE';
-UPDATE myeconomy SET industry = 23.5120701753455 WHERE country = 'TUN';
-UPDATE myeconomy SET industry = 28.3776533622381 WHERE country = 'TUR';
-UPDATE myeconomy SET industry = 28.033943352333 WHERE country = 'TZA';
-UPDATE myeconomy SET industry = 25.7532114394482 WHERE country = 'UGA';
-UPDATE myeconomy SET industry = 18.8356525297022 WHERE country = 'UKR';
-UPDATE myeconomy SET industry = 35.1984212699336 WHERE country = 'UMC';
-UPDATE myeconomy SET industry = 16.3990037186284 WHERE country = 'URY';
-UPDATE myeconomy SET industry = 30.613069883086 WHERE country = 'UZB';
-UPDATE myeconomy SET industry = 14.168374969598 WHERE country = 'VCT';
-UPDATE myeconomy SET industry = 37.1201018368351 WHERE country = 'VNM';
-UPDATE myeconomy SET industry = 26.1198682459356 WHERE country = 'WLD';
-UPDATE myeconomy SET industry = 10.9078361434977 WHERE country = 'WSM';
-UPDATE myeconomy SET industry = 26.345706078274 WHERE country = 'XKX';
-UPDATE myeconomy SET industry = 24.6196414679869 WHERE country = 'ZAF';
-UPDATE myeconomy SET industry = 35.107778069402 WHERE country = 'ZMB';
-UPDATE myeconomy SET industry = 26.3010599208532 WHERE country = 'ZWE';
+-- 1.1 Copy base table and add reference year
+CREATE TABLE IF NOT EXISTS student32.province_economy_extended AS
+SELECT
+  p.*,
+  2023 AS reference_year
+FROM
+  public.province AS p;
 
--- Update service for various countries in the myeconomy table
-UPDATE myeconomy SET service = 45.8355778586404 WHERE country = 'AFE';
-UPDATE myeconomy SET service = 46.5489009688383 WHERE country = 'AFG';
-UPDATE myeconomy SET service = 44.0232540528274 WHERE country = 'AFW';
-UPDATE myeconomy SET service = 39.7932678112576 WHERE country = 'AGO';
-UPDATE myeconomy SET service = 47.9574813038329 WHERE country = 'AL';
-UPDATE myeconomy SET service = 78.3110227448023 WHERE country = 'AND';
-UPDATE myeconomy SET service = 46.358792819096 WHERE country = 'ARB';
-UPDATE myeconomy SET service = 51.5751513919623 WHERE country = 'ARE';
-UPDATE myeconomy SET service = 53.1486935707399 WHERE country = 'RA';
-UPDATE myeconomy SET service = 59.4303162694016 WHERE country = 'ARM';
-UPDATE myeconomy SET service = 67.8467135333456 WHERE country = 'AUS';
-UPDATE myeconomy SET service = 63.5744395451941 WHERE country = 'A';
-UPDATE myeconomy SET service = 63.2630689715199 WHERE country = 'AZ';
-UPDATE myeconomy SET service = 39.0763014661946 WHERE country = 'BI';
-UPDATE myeconomy SET service = 48.771665882928 WHERE country = 'B';
-UPDATE myeconomy SET service = 71.0985332386639 WHERE country = 'BEN';
-UPDATE myeconomy SET service = 47.7220901545374 WHERE country = 'BF';
-UPDATE myeconomy SET service = 43.6395175133099 WHERE country = 'BD';
-UPDATE myeconomy SET service = 51.1119129405073 WHERE country = 'BG';
-UPDATE myeconomy SET service = 62.5047158974609 WHERE country = 'BRN';
-UPDATE myeconomy SET service = 51.8473072019383 WHERE country = 'BS';
-UPDATE myeconomy SET service = 80.8403947414304 WHERE country = 'BIH';
-UPDATE myeconomy SET service = 55.8064494679743 WHERE country = 'BY';
-UPDATE myeconomy SET service = 47.8166851226028 WHERE country = 'BZ';
-UPDATE myeconomy SET service = 62.3848574270016 WHERE country = 'BERM';
-UPDATE myeconomy SET service = 51.0549336216593 WHERE country = 'BR';
-UPDATE myeconomy SET service = 58.8801839765556 WHERE country = 'BDS';
-UPDATE myeconomy SET service = 75.4441107705332 WHERE country = 'BRU';
-UPDATE myeconomy SET service = 38.7533550509643 WHERE country = 'RB';
-UPDATE myeconomy SET service = 59.4201502673704 WHERE country = 'CDN';
-UPDATE myeconomy SET service = 40.5107724497781 WHERE country = 'CEB';
-UPDATE myeconomy SET service = 58.965409271843 WHERE country = 'CHI';
-UPDATE myeconomy SET service = 71.8940438012445 WHERE country = 'RCH';
-UPDATE myeconomy SET service = 91.1810105088333 WHERE country = 'CN';
-UPDATE myeconomy SET service = 56.911007295462 WHERE country = 'CI';
-UPDATE myeconomy SET service = 54.596873599419 WHERE country = 'CMR';
-UPDATE myeconomy SET service = 54.5569177457211 WHERE country = 'CGO';
-UPDATE myeconomy SET service = 50.1846684999699 WHERE country = 'RCB';
-UPDATE myeconomy SET service = 33.5300978093534 WHERE country = 'CO';
-UPDATE myeconomy SET service = 40.4265379027812 WHERE country = 'COM';
-UPDATE myeconomy SET service = 56.8874335594337 WHERE country = 'CPV';
-UPDATE myeconomy SET service = 49.5794959484033 WHERE country = 'CR';
-UPDATE myeconomy SET service = 70.0229748242024 WHERE country = 'CSS';
-UPDATE myeconomy SET service = 67.9930784438128 WHERE country = 'CUR';
-UPDATE myeconomy SET service = 54.6212033022502 WHERE country = 'CAYM';
-UPDATE myeconomy SET service = 73.3089482693586 WHERE country = 'CZ';
-UPDATE myeconomy SET service = 76.6457001628175 WHERE country = 'DJI';
-UPDATE myeconomy SET service = 59.6694492145954 WHERE country = 'WD';
-UPDATE myeconomy SET service = 63.6906260825937 WHERE country = 'DK';
-UPDATE myeconomy SET service = 76.9375194894784 WHERE country = 'DOM';
-UPDATE myeconomy SET service = 58.4506563671578 WHERE country = 'DZA';
-UPDATE myeconomy SET service = 64.424784991723 WHERE country = 'EAP';
-UPDATE myeconomy SET service = 56.0009387070265 WHERE country = 'EAR';
-UPDATE myeconomy SET service = 45.6157814802809 WHERE country = 'EAS';
-UPDATE myeconomy SET service = 53.6806660981098 WHERE country = 'ECA';
-UPDATE myeconomy SET service = 56.2513786174904 WHERE country = 'ECS';
-UPDATE myeconomy SET service = 58.3829618028087 WHERE country = 'EC';
-UPDATE myeconomy SET service = 53.8755327943392 WHERE country = 'ET';
-UPDATE myeconomy SET service = 64.7599599235977 WHERE country = 'EMU';
-UPDATE myeconomy SET service = 59.7246151885485 WHERE country = 'ESP';
-UPDATE myeconomy SET service = 51.2802666269023 WHERE country = 'EST';
-UPDATE myeconomy SET service = 66.2815919261408 WHERE country = 'ETH';
-UPDATE myeconomy SET service = 68.6629193685745 WHERE country = 'FCS';
-UPDATE myeconomy SET service = 64.5405544292353 WHERE country = 'SF';
-UPDATE myeconomy SET service = 36.9830215351258 WHERE country = 'FJI';
-UPDATE myeconomy SET service = 65.478663223302 WHERE country = 'F';
-UPDATE myeconomy SET service = 61.3734816332504 WHERE country = 'FSM';
-UPDATE myeconomy SET service = 55.121840196522 WHERE country = 'GAB';
-UPDATE myeconomy SET service = 69.6610779850985 WHERE country = 'GBR';
-UPDATE myeconomy SET service = 52.0432536041575 WHERE country = 'GE';
-UPDATE myeconomy SET service = 66.8247173913043 WHERE country = 'GH';
-UPDATE myeconomy SET service = 38.2085013857991 WHERE country = 'RG';
-UPDATE myeconomy SET service = 72.5289693602531 WHERE country = 'WAG';
-UPDATE myeconomy SET service = 62.0559152409906 WHERE country = 'GUB';
-UPDATE myeconomy SET service = 42.4581128943492 WHERE country = 'GQ';
-UPDATE myeconomy SET service = 36.9178075735149 WHERE country = 'WG';
-UPDATE myeconomy SET service = 53.639432242026 WHERE country = 'GCA';
-UPDATE myeconomy SET service = 46.0555862293214 WHERE country = 'GUY';
-UPDATE myeconomy SET service = 50.3746976135157 WHERE country = 'HIC';
-UPDATE myeconomy SET service = 68.6441825699983 WHERE country = 'HK';
-UPDATE myeconomy SET service = 64.4794356403895 WHERE country = 'HN';
-UPDATE myeconomy SET service = 61.2883282211373 WHERE country = 'HR';
-UPDATE myeconomy SET service = 91.4616677415925 WHERE country = 'IBT';
-UPDATE myeconomy SET service = 57.3692451884016 WHERE country = 'IDA';
-UPDATE myeconomy SET service = 38.5111841376988 WHERE country = 'IDB';
-UPDATE myeconomy SET service = 59.072848917215 WHERE country = 'IDN';
-UPDATE myeconomy SET service = 47.7988051726064 WHERE country = 'IDX';
-UPDATE myeconomy SET service = 57.5565434973803 WHERE country = 'IND';
-UPDATE myeconomy SET service = 55.9771872530159 WHERE country = 'IRL';
-UPDATE myeconomy SET service = 55.1775536155412 WHERE country = 'IRN';
-UPDATE myeconomy SET service = 44.7349880503105 WHERE country = 'IRQ';
-UPDATE myeconomy SET service = 48.0252567679599 WHERE country = 'IS';
-UPDATE myeconomy SET service = 42.8795250470474 WHERE country = 'ISR';
-UPDATE myeconomy SET service = 42.8608006785579 WHERE country = 'ITA';
-UPDATE myeconomy SET service = 49.5805963962222 WHERE country = 'JOR';
-UPDATE myeconomy SET service = 60.8842446182061 WHERE country = 'KAZ';
-UPDATE myeconomy SET service = 48.2661079352427 WHERE country = 'KEN';
-UPDATE myeconomy SET service = 42.2560919834522 WHERE country = 'KGZ';
-UPDATE myeconomy SET service = 64.6393314326635 WHERE country = 'KHM';
-UPDATE myeconomy SET service = 64.961921547608 WHERE country = 'KNA';
-UPDATE myeconomy SET service = 60.138911478248 WHERE country = 'KOR';
-UPDATE myeconomy SET service = 60.7012268180142 WHERE country = 'KWT';
-UPDATE myeconomy SET service = 56.34917667674 WHERE country = 'LAO';
-UPDATE myeconomy SET service = 55.4156297989398 WHERE country = 'LBR';
-UPDATE myeconomy SET service = 50.7906265349108 WHERE country = 'LBY';
-UPDATE myeconomy SET service = 36.1518032053909 WHERE country = 'LCA';
-UPDATE myeconomy SET service = 66.191918772971 WHERE country = 'LDC';
-UPDATE myeconomy SET service = 58.4222699929626 WHERE country = 'LIC';
-UPDATE myeconomy SET service = 51.34142524328 WHERE country = 'LKA';
-UPDATE myeconomy SET service = 58.0109662030201 WHERE country = 'LMC';
-UPDATE myeconomy SET service = 43.9974165114598 WHERE country = 'LMY';
-UPDATE myeconomy SET service = 36.2735849056604 WHERE country = 'LTE';
-UPDATE myeconomy SET service = 25.4210834669468 WHERE country = 'LTU';
-UPDATE myeconomy SET service = 76.2504953211205 WHERE country = 'LUX';
-UPDATE myeconomy SET service = 65.4322725667733 WHERE country = 'LVA';
-UPDATE myeconomy SET service = 40.8540687436922 WHERE country = 'MAC';
-UPDATE myeconomy SET service = 32.706557637013 WHERE country = 'MAR';
-UPDATE myeconomy SET service = 59.9258366892939 WHERE country = 'MDA';
-UPDATE myeconomy SET service = 49.7483067341894 WHERE country = 'MDG';
-UPDATE myeconomy SET service = 53.2555161917362 WHERE country = 'MDV';
-UPDATE myeconomy SET service = 50.5669279393639 WHERE country = 'MEA';
-UPDATE myeconomy SET service = 55.280061688772 WHERE country = 'MEX';
-UPDATE myeconomy SET service = 63.0899070350123 WHERE country = 'MHL';
-UPDATE myeconomy SET service = 80.5998608844712 WHERE country = 'MIC';
-UPDATE myeconomy SET service = 61.5591540471078 WHERE country = 'MKD';
-UPDATE myeconomy SET service = 91.3870597409349 WHERE country = 'MLI';
-UPDATE myeconomy SET service = 54.2776955468177 WHERE country = 'MMR';
-UPDATE myeconomy SET service = 88.4823833580338 WHERE country = 'MNA';
-UPDATE myeconomy SET service = 61.0854395477285 WHERE country = 'MNE';
-UPDATE myeconomy SET service = 44.6528110273957 WHERE country = 'MNG';
-UPDATE myeconomy SET service = 70.6231180221816 WHERE country = 'MOZ';
-UPDATE myeconomy SET service = 51.2904493902889 WHERE country = 'MRT';
-UPDATE myeconomy SET service = 58.6499962078427 WHERE country = 'MUS';
-UPDATE myeconomy SET service = 70.4693019668338 WHERE country = 'MWI';
-UPDATE myeconomy SET service = 53.6123336338535 WHERE country = 'MYS';
-UPDATE myeconomy SET service = 57.2086688002816 WHERE country = 'NAC';
-UPDATE myeconomy SET service = 36.6666181719314 WHERE country = 'NAM';
-UPDATE myeconomy SET service = 80.6036888807455 WHERE country = 'NER';
-UPDATE myeconomy SET service = 39.6848437771931 WHERE country = 'NGA';
-UPDATE myeconomy SET service = 48.4479384277896 WHERE country = 'NIC';
-UPDATE myeconomy SET service = 62.2377888496133 WHERE country = 'NLD';
-UPDATE myeconomy SET service = 41.0433684122384 WHERE country = 'NOR';
-UPDATE myeconomy SET service = 40.8231147574402 WHERE country = 'NRU';
-UPDATE myeconomy SET service = 43.8318427877491 WHERE country = 'NZL';
-UPDATE myeconomy SET service = 64.9005833309449 WHERE country = 'OED';
-UPDATE myeconomy SET service = 47.5315722384974 WHERE country = 'OMN';
-UPDATE myeconomy SET service = 53.4204772904819 WHERE country = 'OSS';
-UPDATE myeconomy SET service = 53.4036975354245 WHERE country = 'PAN';
-UPDATE myeconomy SET service = 26.9339345226426 WHERE country = 'PHL';
-UPDATE myeconomy SET service = 42.7655317707006 WHERE country = 'PLW';
-UPDATE myeconomy SET service = 46.3110149326323 WHERE country = 'PNG';
-UPDATE myeconomy SET service = 69.6471240606258 WHERE country = 'POL';
-UPDATE myeconomy SET service = 50.008134204623 WHERE country = 'PRE';
-UPDATE myeconomy SET service = 55.3595445510772 WHERE country = 'PRI';
-UPDATE myeconomy SET service = 46.4283494830034 WHERE country = 'PSS';
-UPDATE myeconomy SET service = 63.5791389645205 WHERE country = 'PST';
-UPDATE myeconomy SET service = 50.7555628747837 WHERE country = 'QAT';
-UPDATE myeconomy SET service = 67.2882121116119 WHERE country = 'ROU';
-UPDATE myeconomy SET service = 51.3287285648693 WHERE country = 'RUS';
-UPDATE myeconomy SET service = 62.4225634583799 WHERE country = 'RWA';
-UPDATE myeconomy SET service = 76.6703487369418 WHERE country = 'SAS';
-UPDATE myeconomy SET service = 42.0273850048351 WHERE country = 'SAU';
-UPDATE myeconomy SET service = 57.5136479490594 WHERE country = 'SDN';
-UPDATE myeconomy SET service = 40.5780677189816 WHERE country = 'SEN';
-UPDATE myeconomy SET service = 50.5543997021263 WHERE country = 'SGP';
-UPDATE myeconomy SET service = 66.7581146826509 WHERE country = 'SLE';
-UPDATE myeconomy SET service = 48.9777987518183 WHERE country = 'ES';
-UPDATE myeconomy SET service = 56.3887119534129 WHERE country = 'SRB';
-UPDATE myeconomy SET service = 45.2806174448729 WHERE country = 'SST';
-UPDATE myeconomy SET service = 60.7333003438962 WHERE country = 'STP';
-UPDATE myeconomy SET service = 56.880333416224 WHERE country = 'SUR';
-UPDATE myeconomy SET service = 44.3404476191432 WHERE country = 'SVK';
-UPDATE myeconomy SET service = 50.0859937798052 WHERE country = 'SVN';
-UPDATE myeconomy SET service = 44.8722547331842 WHERE country = 'SWE';
-UPDATE myeconomy SET service = 7.47787820826183 WHERE country = 'SWZ';
-UPDATE myeconomy SET service = 49.1784059296179 WHERE country = 'SXM';
-UPDATE myeconomy SET service = 72.4478661304621 WHERE country = 'SYC';
-UPDATE myeconomy SET service = 41.9786506638961 WHERE country = 'TCH';
-UPDATE myeconomy SET service = 59.765954582042 WHERE country = 'TEA';
-UPDATE myeconomy SET service = 57.5791112744077 WHERE country = 'THA';
-UPDATE myeconomy SET service = 45.088396291058 WHERE country = 'TJK';
-UPDATE myeconomy SET service = 45.112431070373 WHERE country = 'TLA';
-UPDATE myeconomy SET service = 61.8214973408043 WHERE country = 'TLS';
-UPDATE myeconomy SET service = 75.8704271854858 WHERE country = 'TMN';
-UPDATE myeconomy SET service = 48.2956026154186 WHERE country = 'TSA';
-UPDATE myeconomy SET service = 56.3764435973131 WHERE country = 'TSS';
-UPDATE myeconomy SET service = 57.74956134939 WHERE country = 'TTO';
-UPDATE myeconomy SET service = 65.2205380627646 WHERE country = 'TUN';
-UPDATE myeconomy SET service = 51.2995439859709 WHERE country = 'TUR';
-UPDATE myeconomy SET service = 67.9604447786289 WHERE country = 'TZA';
-UPDATE myeconomy SET service = 28.7034712807209 WHERE country = 'UMC';
-UPDATE myeconomy SET service = 53.7061206517921 WHERE country = 'URY';
-UPDATE myeconomy SET service = 56.1841824912171 WHERE country = 'USA';
-UPDATE myeconomy SET service = 51.7273921851659 WHERE country = 'UZB';
-UPDATE myeconomy SET service = 58.5372545242901 WHERE country = 'VCT';
-UPDATE myeconomy SET service = 49.436147803262 WHERE country = 'VUT';
-UPDATE myeconomy SET service = 65.4183868657403 WHERE country = 'WLD';
-UPDATE myeconomy SET service = 61.0070575415777 WHERE country = 'WSM';
-UPDATE myeconomy SET service = 48.2794469298897 WHERE country = 'XKX';
-UPDATE myeconomy SET service = 50.0859937798052 WHERE country = 'ZMB';
-UPDATE myeconomy SET service = 45.112431070373 WHERE country = 'ZWE';
-UPDATE myeconomy SET service = 62.1070510941353 WHERE country = '';
-UPDATE myeconomy SET service = 54.129655900832 WHERE country = '';
-UPDATE myeconomy SET service = 28.6974346292413 WHERE country = '';
-UPDATE myeconomy SET service = 42.5125306078843 WHERE country = '';
-UPDATE myeconomy SET service = 61.3473441090883 WHERE country = '';
-UPDATE myeconomy SET service = 54.5864947067852 WHERE country = '';
-UPDATE myeconomy SET service = 66.2958502399681 WHERE country = '';
-UPDATE myeconomy SET service = 43.9400268339745 WHERE country = '';
-UPDATE myeconomy SET service = 64.2069420798443 WHERE country = '';
-UPDATE myeconomy SET service = 42.5369982260521 WHERE country = '';
-UPDATE myeconomy SET service = 67.7278594059533 WHERE country = '';
-UPDATE myeconomy SET service = 46.5646570421465 WHERE country = '';
-UPDATE myeconomy SET service = 62.6102798428866 WHERE country = '';
-UPDATE myeconomy SET service = 56.8167642432298 WHERE country = '';
-UPDATE myeconomy SET service = 62.4107327838574 WHERE country = '';
+-- 1.2 Add new economic indicator columns
+ALTER TABLE student32.province_economy_extended
+  ADD COLUMN IF NOT EXISTS province_gdp_per_capita    NUMERIC,  -- new: GDP per capita
+  ADD COLUMN IF NOT EXISTS province_infaltion_rate    NUMERIC,  -- new: Inflation rate
+  ADD COLUMN IF NOT EXISTS province_unemployment_rate NUMERIC,  -- new: Unemployment rate
+  ADD COLUMN IF NOT EXISTS province_gdp               NUMERIC,  -- new: Estimated total GDP
+  ADD COLUMN IF NOT EXISTS population_density         NUMERIC;  -- new: Population density
 
--- Update unemployment for various countries in the myeconomy table
-UPDATE myeconomy SET unemployment = 10.669 WHERE country = 'AL';
-UPDATE myeconomy SET unemployment = 2.151 WHERE country = 'ARE';
-UPDATE myeconomy SET unemployment = 6.139 WHERE country = 'RA';
-UPDATE myeconomy SET unemployment = 3.668 WHERE country = 'A';
-UPDATE myeconomy SET unemployment = 5.264 WHERE country = 'AZ';
-UPDATE myeconomy SET unemployment = 5.528 WHERE country = 'BEN';
-UPDATE myeconomy SET unemployment = 5.348 WHERE country = 'BD';
-UPDATE myeconomy SET unemployment = 4.319 WHERE country = 'BRN';
-UPDATE myeconomy SET unemployment = 8.643 WHERE country = 'BIH';
-UPDATE myeconomy SET unemployment = 10.668 WHERE country = 'BY';
-UPDATE myeconomy SET unemployment = 3.461 WHERE country = 'BZ';
-UPDATE myeconomy SET unemployment = 3.024 WHERE country = 'BR';
-UPDATE myeconomy SET unemployment = 7.947 WHERE country = 'BDS';
-UPDATE myeconomy SET unemployment = 5.296 WHERE country = 'RB';
-UPDATE myeconomy SET unemployment = 3.126 WHERE country = 'RCA';
-UPDATE myeconomy SET unemployment = 23.381 WHERE country = 'CDN';
-UPDATE myeconomy SET unemployment = 5.415 WHERE country = 'CHE';
-UPDATE myeconomy SET unemployment = 4.01484038583714 WHERE country = 'CHI';
-UPDATE myeconomy SET unemployment = 4.043 WHERE country = 'RCH';
-UPDATE myeconomy SET unemployment = 9.013 WHERE country = 'CI';
-UPDATE myeconomy SET unemployment = 9.603 WHERE country = 'CPV';
-UPDATE myeconomy SET unemployment = 8.325 WHERE country = 'CUR';
-UPDATE myeconomy SET unemployment = 5.835 WHERE country = 'DJI';
-UPDATE myeconomy SET unemployment = 2.58 WHERE country = 'WD';
-UPDATE myeconomy SET unemployment = 3.068 WHERE country = 'DK';
-UPDATE myeconomy SET unemployment = 5.094 WHERE country = 'EAP';
-UPDATE myeconomy SET unemployment = 5.555 WHERE country = 'EAR';
-UPDATE myeconomy SET unemployment = 5.17835618086222 WHERE country = 'ECS';
-UPDATE myeconomy SET unemployment = 5.56992854863256 WHERE country = 'EMU';
-UPDATE myeconomy SET unemployment = 3.51 WHERE country = 'ESP';
-UPDATE myeconomy SET unemployment = 6.753 WHERE country = 'EST';
-UPDATE myeconomy SET unemployment = 6.56231846699685 WHERE country = 'ETH';
-UPDATE myeconomy SET unemployment = 12.179 WHERE country = 'FCS';
-UPDATE myeconomy SET unemployment = 6.378 WHERE country = 'SF';
-UPDATE myeconomy SET unemployment = 6.02780114319405 WHERE country = 'F';
-UPDATE myeconomy SET unemployment = 7.151 WHERE country = 'FSM';
-UPDATE myeconomy SET unemployment = 7.335 WHERE country = 'GBR';
-UPDATE myeconomy SET unemployment = 4.025 WHERE country = 'WAG';
-UPDATE myeconomy SET unemployment = 6.479 WHERE country = 'GCA';
-UPDATE myeconomy SET unemployment = 11.023 WHERE country = 'HK';
-UPDATE myeconomy SET unemployment = 6.34 WHERE country = 'HN';
-UPDATE myeconomy SET unemployment = 2.344 WHERE country = 'HR';
-UPDATE myeconomy SET unemployment = 4.35977463623864 WHERE country = 'IBD';
-UPDATE myeconomy SET unemployment = 2.949 WHERE country = 'IBT';
-UPDATE myeconomy SET unemployment = 6.071 WHERE country = 'IDA';
-UPDATE myeconomy SET unemployment = 6.086 WHERE country = 'IDN';
-UPDATE myeconomy SET unemployment = 4.107 WHERE country = 'IND';
-UPDATE myeconomy SET unemployment = 3.308 WHERE country = 'ISR';
-UPDATE myeconomy SET unemployment = 4.172 WHERE country = 'JOR';
-UPDATE myeconomy SET unemployment = 4.288 WHERE country = 'KAZ';
-UPDATE myeconomy SET unemployment = 3.518 WHERE country = 'KHM';
-UPDATE myeconomy SET unemployment = 3.371 WHERE country = 'KIR';
-UPDATE myeconomy SET unemployment = 7.627 WHERE country = 'KNA';
-UPDATE myeconomy SET unemployment = 3.022 WHERE country = 'KOR';
-UPDATE myeconomy SET unemployment = 16.622 WHERE country = 'KWT';
-UPDATE myeconomy SET unemployment = 2.6 WHERE country = 'LAC';
-UPDATE myeconomy SET unemployment = 2.675 WHERE country = 'LIC';
-UPDATE myeconomy SET unemployment = 6.04310814337263 WHERE country = 'LMC';
-UPDATE myeconomy SET unemployment = 12.094 WHERE country = 'LUX';
-UPDATE myeconomy SET unemployment = 6.15985508925149 WHERE country = 'LVA';
-UPDATE myeconomy SET unemployment = 6.841 WHERE country = 'MHL';
-UPDATE myeconomy SET unemployment = 5.184 WHERE country = 'MIC';
-UPDATE myeconomy SET unemployment = 6.465 WHERE country = 'MKD';
-UPDATE myeconomy SET unemployment = 1.57 WHERE country = 'MNE';
-UPDATE myeconomy SET unemployment = 2.765 WHERE country = 'MUS';
-UPDATE myeconomy SET unemployment = 13.174 WHERE country = 'NAC';
-UPDATE myeconomy SET unemployment = 3.11 WHERE country = 'NER';
-UPDATE myeconomy SET unemployment = 5.178 WHERE country = 'NOR';
-UPDATE myeconomy SET unemployment = 5.571 WHERE country = 'OED';
-UPDATE myeconomy SET unemployment = 3.84181538522376 WHERE country = 'PAK';
-UPDATE myeconomy SET unemployment = 3.074 WHERE country = 'PLW';
-UPDATE myeconomy SET unemployment = 3.537 WHERE country = 'POL';
-UPDATE myeconomy SET unemployment = 3.573 WHERE country = 'PRE';
-UPDATE myeconomy SET unemployment = 3.731 WHERE country = 'PRY';
-UPDATE myeconomy SET unemployment = 4.82898156053658 WHERE country = 'GAZA';
-UPDATE myeconomy SET unemployment = 6.678 WHERE country = 'ROU';
-UPDATE myeconomy SET unemployment = 4.899 WHERE country = 'RUS';
-UPDATE myeconomy SET unemployment = 2.743 WHERE country = 'SDN';
-UPDATE myeconomy SET unemployment = 6.509 WHERE country = 'SLE';
-UPDATE myeconomy SET unemployment = 5.794 WHERE country = 'ES';
-UPDATE myeconomy SET unemployment = 4.49598413009182 WHERE country = 'SSA';
-UPDATE myeconomy SET unemployment = 5.592 WHERE country = 'STP';
-UPDATE myeconomy SET unemployment = 3.076 WHERE country = 'SUR';
-UPDATE myeconomy SET unemployment = 12.352 WHERE country = 'SVK';
-UPDATE myeconomy SET unemployment = 4.17128758281397 WHERE country = 'SVN';
-UPDATE myeconomy SET unemployment = 4.008 WHERE country = 'SWE';
-UPDATE myeconomy SET unemployment = 3.444 WHERE country = 'SYC';
-UPDATE myeconomy SET unemployment = 2.992 WHERE country = 'TEA';
-UPDATE myeconomy SET unemployment = 8.268 WHERE country = 'THA';
-UPDATE myeconomy SET unemployment = 5.843 WHERE country = 'TSS';
-UPDATE myeconomy SET unemployment = 3.652 WHERE country = 'TTO';
-UPDATE myeconomy SET unemployment = 7.611 WHERE country = 'TUN';
-UPDATE myeconomy SET unemployment = 2.934 WHERE country = 'TZA';
-UPDATE myeconomy SET unemployment = 4.99278220101002 WHERE country = 'USA';
-UPDATE myeconomy SET unemployment = 0.733 WHERE country = 'VCT';
-UPDATE myeconomy SET unemployment = 6.15784507025215 WHERE country = 'WLD';
-UPDATE myeconomy SET unemployment = 4.17128758281397 WHERE country = 'ZMB';
-UPDATE myeconomy SET unemployment = 3.362 WHERE country = 'TTO';
-UPDATE myeconomy SET unemployment = 15.106 WHERE country = 'TUN';
-UPDATE myeconomy SET unemployment = 9.388 WHERE country = 'TUR';
-UPDATE myeconomy SET unemployment = 8.355 WHERE country = 'URY';
-UPDATE myeconomy SET unemployment = 3.638 WHERE country = 'USA';
-UPDATE myeconomy SET unemployment = 1.645 WHERE country = 'VNM';
-UPDATE myeconomy SET unemployment = 32.098 WHERE country = 'ZAF';
-UPDATE myeconomy SET unemployment = 5.861 WHERE country = 'ZMB';
-UPDATE myeconomy SET unemployment = 9.348 WHERE country = 'ZWE';
+-- 1.3 Add primary key constraint
+ALTER TABLE student32.province_economy_extended
+  ADD CONSTRAINT pk_province_economy PRIMARY KEY (name, country, reference_year);
+
+-- 1.4 Populate random placeholder values for 2023 provinces
+UPDATE student32.province_economy_extended
+SET
+  province_gdp_per_capita    = ROUND((random() * 40000 + 5000)::numeric, 2),  -- between 5,000 and 45,000
+  province_infaltion_rate    = ROUND((random() * 5)::numeric, 2),             -- between 0% and 5%
+  province_unemployment_rate = ROUND((random() * 15)::numeric, 1),            -- between 0% and 15%
+  province_gdp               = ROUND(
+                                  COALESCE(province_gdp_per_capita, 0)
+                                  * COALESCE(population, 0)
+                                , 2),                                         -- GDP per capita × population
+  population_density         = ROUND(population / NULLIF(area, 0), 2)        -- population ÷ area
+WHERE
+  reference_year = 2023;
+
+-- ============================================================================
+-- SECTION 2: CITY EXTENSION
+-- ============================================================================
+
+-- 2.0 Drop old extended table if it exists
+DROP TABLE IF EXISTS student32.city_economic_data_extended CASCADE;
+
+-- 2.1 Copy base table and add reference year
+CREATE TABLE IF NOT EXISTS student32.city_economic_data_extended AS
+SELECT
+  ced.*,
+  2023 AS reference_year
+FROM
+  student32.city_economic_data AS ced;
+
+-- 2.2 Add new economic indicator columns
+ALTER TABLE student32.city_economic_data_extended
+  ADD COLUMN IF NOT EXISTS tourism_index            NUMERIC,  -- new: Tourism index (0–100)
+  ADD COLUMN IF NOT EXISTS avg_income_per_capita    NUMERIC,  -- new: Average income per capita
+  ADD COLUMN IF NOT EXISTS public_transport_quality NUMERIC;  -- new: Public transport quality (1–10)
+
+-- 2.3 Add new geographic detail columns
+ALTER TABLE student32.city_economic_data_extended
+  ADD COLUMN IF NOT EXISTS latitude   NUMERIC,    -- new: Latitude
+  ADD COLUMN IF NOT EXISTS longitude  NUMERIC,    -- new: Longitude
+  ADD COLUMN IF NOT EXISTS elevation  NUMERIC;    -- new: Elevation above sea level (m)
+
+-- 2.4 Populate geographic details via join on public.city
+UPDATE student32.city_economic_data_extended AS cedx
+SET
+  latitude  = pc.latitude,
+  longitude = pc.longitude,
+  elevation = pc.elevation
+FROM
+  public.city AS pc
+WHERE
+  cedx.name        = pc.name
+  AND cedx.country = pc.country
+  AND cedx.reference_year = 2023;
+
+-- 2.5 Add primary key constraint
+ALTER TABLE student32.city_economic_data_extended
+  ADD CONSTRAINT pk_city_economic PRIMARY KEY (city_id, reference_year);
+
+-- 2.6–2.12 Populate random placeholder values for NULL columns
+UPDATE student32.city_economic_data_extended
+SET
+  tourism_index            = COALESCE(tourism_index,
+                                     ROUND((random() * 50 + 30)::numeric, 1)),  -- between 30 and 80
+  public_transport_quality = COALESCE(public_transport_quality,
+                                     ROUND((random() * 4 + 6)::numeric, 1)),   -- between 6 and 10
+  avg_income_per_capita    = COALESCE(avg_income_per_capita,
+                                     ROUND((random() * 50000 + 25000)::numeric, 0)), -- between 25k and 75k
+  major_industries         = CASE FLOOR(random() * 5)::int
+                                 WHEN 0 THEN 'Services, Retail, Manufacturing'
+                                 WHEN 1 THEN 'Finance, Insurance, Real Estate'
+                                 WHEN 2 THEN 'Tourism, Arts, Culture'
+                                 WHEN 3 THEN 'Technology, Startups, Research'
+                                 WHEN 4 THEN 'Logistics, Transport, Wholesale'
+                               END,
+  annual_conferences         = COALESCE(annual_conferences,
+                                       (FLOOR(random() * 50 + 1))::int),  -- between 1 and 50
+  international_organizations = COALESCE(international_organizations,
+                                       (FLOOR(random() * 20))::int),      -- between 0 and 19
+  unemployment_rate          = COALESCE(unemployment_rate,
+                                       ROUND((random() * 11 + 3)::numeric, 1)), -- between 3% and 14%
+  gdp_city                   = COALESCE(gdp_city,
+                                       ROUND((random() * 9900000 + 100000)::numeric, 0)) -- between 100k and 10M
+WHERE
+  reference_year = 2023;
+
+-- ============================================================================
+-- SECTION 3: VALIDATION QUERIES
+-- ============================================================================
+
+-- 3.1 Validate province_economy_extended
+SELECT
+  country,
+  name,
+  reference_year,
+  province_gdp_per_capita,
+  province_infaltion_rate,
+  province_unemployment_rate,
+  province_gdp,
+  population_density
+FROM
+  student32.province_economy_extended
+ORDER BY
+  country, name;
+
+-- 3.2 Validate city_economic_data_extended
+SELECT
+  city_id,
+  name,
+  country,
+  reference_year,
+  population,
+  latitude,
+  longitude,
+  elevation,
+  avg_income_per_capita,
+  unemployment_rate,
+  gdp_city,
+  tourism_index,
+  public_transport_quality,
+  major_industries,
+  annual_conferences,
+  international_organizations
+FROM
+  student32.city_economic_data_extended
+ORDER BY
+  name;
+
+COMMIT;  -- End transaction

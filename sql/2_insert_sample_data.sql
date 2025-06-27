@@ -1,13 +1,54 @@
-INSERT INTO countrystats (
-    year, country, debt_amount, debt_currency,
-    internet_usage, co2_per_person, co2_unit
-) 
-VALUES
-(2020, 'Germany', 2332000000000, 'EUR', 89.80, 7.30, 'tonnes'),
-(2020, 'UK', 2206500000000, 'GBP', 94.80, 4.60, 'tonnes'),
-(2020, 'France', 2300000000000, 'EUR', 84.70, 4.00, 'tonnes'),
-(2020, 'Italy', 2580000000000, 'EUR', 70.50, 4.70, 'tonnes'),
-(2020, 'Belgium', 421840000000, 'EUR', 91.50, 7.40, 'tonnes'),
-(2020, 'Austria', 216400000000, 'EUR', 87.50, 6.60, 'tonnes'),
-(2020, 'Switzerland', 141000000000, 'CHF', 94.30, 4.00, 'tonnes'),
-(2020, 'Spain', 1350000000000, 'EUR', 93.20, 4.30, 'tonnes');
+/* -----------------------------------------------------------------------------
+   FILE:    2_insert_sample_data.sql
+   PURPOSE: Insert example data into currency, gdp, and inflation tables
+   SCHEMA:  student32 (Economy Project)
+   AUTHOR:  Njomza Bytyqi (student32 / 330021)
+   NOTES:   Provides sample records for currencies, GDP figures, and inflation rates
+----------------------------------------------------------------------------- */
+
+-- ============================================================================
+-- SECTION: Sample Currencies
+--   • code:        ISO currency code
+--   • name:        Currency name
+--   • exchange_rate: Exchange rate vs. USD
+--   • country_code: ISO country code
+-- ============================================================================
+INSERT INTO student32.currency (code, name, exchange_rate, country_code) VALUES
+    ('EUR', 'Euro',           1.07, 'DEU'),  -- Germany
+    ('GBP', 'British Pound',  1.25, 'GBR'),  -- United Kingdom
+    -- Austria would go here
+    ('CHF', 'Swiss Franc',    1.10, 'CHE');  -- Switzerland
+    -- Spain (missing example)
+
+-- ============================================================================
+-- SECTION: Sample GDP Values
+--   • year:         Year of measurement
+--   • country_code: ISO country code
+--   • amount:       GDP in billions of local currency
+--   • currency_code: Currency code used
+-- ============================================================================
+INSERT INTO student32.gdp (year, country_code, amount, currency_code) VALUES
+    (2023, 'DEU', 4295.0, 'EUR'),  -- Germany
+    (2023, 'GBR', 3131.0, 'GBP'),  -- United Kingdom
+    (2023, 'FRA', 3005.0, 'EUR'),  -- France
+    (2023, 'ITA', 2182.0, 'EUR'),  -- Italy
+    (2023, 'BEL',  625.0, 'EUR'),  -- Belgium
+    (2023, 'AUT',  520.0, 'EUR'),  -- Austria
+    (2023, 'CHE',  824.0, 'CHF'),  -- Switzerland
+    (2023, 'ESP', 1614.0, 'EUR');  -- Spain
+
+-- ============================================================================
+-- SECTION: Sample Inflation Rates
+--   • year:         Year of measurement
+--   • country_code: ISO country code
+--   • rate:         Inflation rate in percent
+-- ============================================================================
+INSERT INTO student32.inflation (year, country_code, rate) VALUES
+    (2023, 'DEU', 5.9),  -- Germany
+    (2023, 'GBR', 7.3),  -- United Kingdom
+    (2023, 'FRA', 5.2),  -- France
+    (2023, 'ITA', 6.7),  -- Italy
+    (2023, 'BEL', 4.9),  -- Belgium
+    (2023, 'AUT', 8.1),  -- Austria
+    (2023, 'CHE', 2.2),  -- Switzerland
+    (2023, 'ESP', 3.4);  -- Spain
