@@ -11,23 +11,21 @@
    AUTHOR:  Njomza Bytyqi (student32 / 330021)
 ----------------------------------------------------------------------------- */
 
-
 -- ============================================================================
 -- SECTION A: ADDITIONAL CHECK CONSTRAINTS
 -- Adds integrity constraints to ensure data validity directly at the schema level.
 -- ============================================================================
 
--- A.1 Ensure exchange_rate is strictly positive in the 'currency' table
+-- A.1 Add a CHECK constraint: Ensure 'exchange_rate' is strictly positive in 'currency' table
 DO $$
 BEGIN
-  -- Prevent duplicate constraint creation by checking metadata
+  -- Prevent duplicate constraint creation by checking for its existence first
   IF NOT EXISTS (
     SELECT 1
       FROM information_schema.check_constraints
      WHERE constraint_name = 'currency_exchange_rate_positive'
        AND constraint_schema = 'student32'
   ) THEN
-    -- Add CHECK constraint if not already present
     ALTER TABLE student32.currency
       ADD CONSTRAINT currency_exchange_rate_positive
       CHECK (exchange_rate > 0);
@@ -38,7 +36,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- A.2 Ensure GDP 'amount' is zero or positive in the 'gdp' table
+-- A.2 Add a CHECK constraint: Ensure GDP 'amount' is non-negative in the 'gdp' table
 DO $$
 BEGIN
   IF NOT EXISTS (
@@ -57,7 +55,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- A.3 Ensure 'rate' is non-negative in the 'inflation' table
+-- A.3 Add a CHECK constraint: Ensure 'rate' is non-negative in the 'inflation' table
 DO $$
 BEGIN
   IF NOT EXISTS (
@@ -84,50 +82,74 @@ $$ LANGUAGE plpgsql;
 
 SELECT '=== POSITIVE TESTS: Valid data is accepted ===' AS test_section;
 
--- B.1 Insert valid currency record (rate > 0)
-BEGIN;
-  INSERT INTO student32.currency(code, name, exchange_rate)
-    VALUES('TST','TestCurrency',0.5)
-    ON CONFLICT DO NOTHING; -- Avoid duplicate inserts in repeated test runs
-  RAISE NOTICE 'SUCCESS: Valid currency insert accepted';
-  DELETE FROM student32.currency WHERE code = 'TST'; -- Cleanup after test
-COMMIT;
-
--- B.2 Insert valid GDP record (amount ≥ 0, existing foreign key values assumed)
-BEGIN;
-  INSERT INTO student32.gdp(year, country_code, amount, currency_code)
-    VALUES(2023,'DEU',1000,'EUR')
+-- B.1 Insert a valid currency (exchange_rate > 0), then clean up test record
+DO $$
+BEGIN
+  -- Insert valid test currency, including required NOT NULL fields
+  INSERT INTO student32.currency (code, name, exchange_rate, country_code)
+    VALUES ('TST', 'TestCurrency', 0.5, 'TST')
     ON CONFLICT DO NOTHING;
-  RAISE NOTICE 'SUCCESS: Valid GDP insert accepted';
-  DELETE FROM student32.gdp
-    WHERE year = 2023 AND country_code = 'DEU' AND amount = 1000;
-COMMIT;
+  RAISE NOTICE 'SUCCESS: Valid currency insert accepted';
 
--- B.3 Insert valid inflation record (rate ≥ 0)
-BEGIN;
+  -- Cleanup: Remove the test record
+  DELETE FROM student32.currency WHERE code = 'TST';
+END;
+$$ LANGUAGE plpgsql;
+
+-- B.2 Insert a valid GDP record (amount >= 0, foreign key must exist), then clean up
+DO $$
+BEGIN
+  -- Ensure referenced currency exists (required for FK), using idempotent insert
+  INSERT INTO student32.currency (code, name, exchange_rate, country_code)
+    VALUES ('EUR', 'Euro', 1.0, 'DEU')
+    ON CONFLICT DO NOTHING;
+
+  -- Insert test GDP record with non-negative amount
+  INSERT INTO student32.gdp (year, country_code, amount, currency_code)
+    VALUES (2023, 'DEU', 1000, 'EUR')
+    ON CONFLICT DO NOTHING;
+
+  RAISE NOTICE 'SUCCESS: Valid GDP insert accepted';
+
+  -- Cleanup: Remove the test GDP record
+  DELETE FROM student32.gdp
+    WHERE year = 2023
+      AND country_code = 'DEU'
+      AND amount = 1000;
+END;
+$$ LANGUAGE plpgsql;
+
+-- B.3 Insert a valid inflation record (rate >= 0), then clean up
+DO $$
+BEGIN
+  -- Insert valid inflation record
   INSERT INTO student32.inflation(year, country_code, rate)
-    VALUES(2023,'DEU',1.5)
+    VALUES (2023, 'DEU', 1.5)
     ON CONFLICT DO NOTHING;
   RAISE NOTICE 'SUCCESS: Valid inflation insert accepted';
+
+  -- Cleanup: Remove test record
   DELETE FROM student32.inflation
     WHERE year = 2023 AND country_code = 'DEU' AND rate = 1.5;
-COMMIT;
+END;
+$$ LANGUAGE plpgsql;
 
 
 -- ============================================================================
 -- SECTION C: NEGATIVE TESTS
 -- Attempts to insert invalid data; constraints should block these operations.
 -- ============================================================================
+
 SELECT '=== NEGATIVE TESTS: Invalid data is rejected ===' AS test_section;
 
--- C.1 Attempt to insert currency with negative exchange rate
+-- C.1 Try inserting a currency with negative exchange_rate; should be rejected
 DO $$
 BEGIN
   BEGIN
     RAISE NOTICE 'Test C.1: currency.exchange_rate negative';
-    INSERT INTO student32.currency(code, name, exchange_rate)
-      VALUES('BAD','BadCurrency',-1);
-    -- If no error, raise a manual exception to indicate failure
+    INSERT INTO student32.currency(code, name, exchange_rate, country_code)
+      VALUES('BAD', 'BadCurrency', -1, 'BAD');
+    -- If insert succeeds, force error (should never happen)
     RAISE EXCEPTION 'ERROR: currency_exchange_rate_positive should have rejected -1';
   EXCEPTION
     WHEN check_violation THEN
@@ -138,13 +160,13 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- C.2 Attempt to insert GDP with negative amount
+-- C.2 Try inserting GDP with negative amount; should be rejected
 DO $$
 BEGIN
   BEGIN
     RAISE NOTICE 'Test C.2: gdp.amount negative';
     INSERT INTO student32.gdp(year, country_code, amount, currency_code)
-      VALUES(2023,'DEU',-100,'EUR');
+      VALUES(2023, 'DEU', -100, 'EUR');
     RAISE EXCEPTION 'ERROR: gdp_amount_non_negative should have rejected -100';
   EXCEPTION
     WHEN check_violation THEN
@@ -155,13 +177,13 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- C.3 Attempt to insert inflation with negative rate
+-- C.3 Try inserting inflation with negative rate; should be rejected
 DO $$
 BEGIN
   BEGIN
     RAISE NOTICE 'Test C.3: inflation.rate negative';
     INSERT INTO student32.inflation(year, country_code, rate)
-      VALUES(2023,'DEU',-5);
+      VALUES(2023, 'DEU', -5);
     RAISE EXCEPTION 'ERROR: inflation_rate_non_negative should have rejected -5';
   EXCEPTION
     WHEN check_violation THEN
@@ -177,25 +199,28 @@ $$ LANGUAGE plpgsql;
 -- SECTION D: NORMALIZATION PROOF
 -- Documents the schema's compliance with normalization forms (1NF through 3NF)
 -- ============================================================================
+
 SELECT '=== NORMALIZATION ANALYSIS: 1NF, 2NF, 3NF ===' AS norm_section;
 
--- D.1 First Normal Form (1NF): Atomic values, no multivalued fields
+-- D.1 First Normal Form (1NF): All attributes are atomic, no repeating groups or arrays
 SELECT '- 1NF: All attributes are atomic, no repeating groups' AS nf1;
 
--- D.2 Second Normal Form (2NF): Full functional dependency on entire primary key
+-- D.2 Second Normal Form (2NF): No partial dependencies on part of a composite key
 SELECT '- 2NF: No partial dependencies on part of a composite key' AS nf2;
 
--- D.3 Third Normal Form (3NF): Non-key attributes depend only on keys, not other non-key attributes
+-- D.3 Third Normal Form (3NF): No transitive dependencies among non-key attributes
 SELECT '- 3NF: No transitive dependencies among non-key attributes' AS nf3;
 
 SELECT '✅ NORMALIZATION PROOF COMPLETE' AS final_result;
-
 
 -- ============================================================================
 -- SECTION E: SUMMARY OF ACTIVE CONSTRAINTS
 -- Queries the catalog to list all active constraints in the schema.
 -- ============================================================================
+
 SELECT '=== ACTIVE CHECK CONSTRAINTS ===' AS summary_section;
+
+-- List all active CHECK constraints for the schema
 SELECT
   tc.constraint_name,
   tc.table_name,
@@ -212,6 +237,8 @@ ORDER BY
   tc.constraint_name;
 
 SELECT '=== ACTIVE FOREIGN KEY CONSTRAINTS ===' AS summary_section;
+
+-- List all active FOREIGN KEY constraints for the schema
 SELECT
   tc.constraint_name,
   tc.table_name,
