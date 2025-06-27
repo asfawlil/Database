@@ -16,9 +16,8 @@
 INSERT INTO student32.currency (code, name, exchange_rate, country_code) VALUES
     ('EUR', 'Euro',           1.07, 'DEU'),  -- Germany
     ('GBP', 'British Pound',  1.25, 'GBR'),  -- United Kingdom
-    -- Austria would go here
     ('CHF', 'Swiss Franc',    1.10, 'CHE');  -- Switzerland
-    -- Spain (missing example)
+    
 
 -- ============================================================================
 -- SECTION: Sample GDP Values
