@@ -9,7 +9,7 @@
 -- Goal: What percentage of the average salary is the minimum wage?
 -- Extended with classification below/above the global average
 
--- Use CTE (Common Table Expression) for modular logic and reusability
+-- Use CTE for modular logic and reusability
 -- Calculates global average salary across all countries and years
 WITH global_avg AS (
   SELECT ROUND(AVG(amount), 2) AS avg_global_salary
