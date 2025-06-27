@@ -1,6 +1,6 @@
 -- ---------------------------------------------------------------
 -- Complex Labor Market Analysis
--- Author: Liliana Asfaw (student38)
+-- Author: Liliana Asfaw (student38/329850)
 -- Goal: Analyze and compare labor-related indicators 
 --       such as unemployment rate, average salary, and minimum wage
 -- ---------------------------------------------------------------

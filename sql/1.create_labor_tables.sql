@@ -1,7 +1,7 @@
 -- Active: 1750679793034@@141.47.5.117@5432@mondial
 -- ---------------------------------------------------------------
 -- Module: BIS2161 / BIS3081 – Summer Semester 2025
--- Author: Liliana Asfaw (student38)
+-- Author: Liliana Asfaw (student38/329850)
 -- Topic: Economic Indicators (Unemployment, Average Salary, Minimum Wage)
 -- ---------------------------------------------------------------
 

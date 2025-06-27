@@ -1,6 +1,6 @@
 -- ---------------------------------------------------------------
 -- Labor Market Data – Sample Entries for the Year 2023
--- Author: Liliana Asfaw (student38)
+-- Author: Liliana Asfaw (student38/329850)
 -- Data set for comparison and analysis in the Mondial extension
 -- ---------------------------------------------------------------
 

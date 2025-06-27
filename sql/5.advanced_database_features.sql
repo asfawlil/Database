@@ -1,6 +1,6 @@
 -- ---------------------------------------------------------------
 -- Advanced SQL Features: Views, Triggers & Stored Procedures
--- Author: Liliana Asfaw (student38)
+-- Author: Liliana Asfaw (student38/329850)
 -- ---------------------------------------------------------------
 
 -- View: Overview of all labor market data for 2023
